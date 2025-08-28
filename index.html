@@ -3,703 +3,1958 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Treact</title>
+    <title>Selfish Trader</title>
     <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
     <script
       src="https://kit.fontawesome.com/2a9b41181f.js"
       crossorigin="anonymous"
     ></script>
-    <script src="./index.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"
+      defer
+    ></script>
+    <script src="./index.js" defer></script>
   </head>
   <body>
     <section id="landing">
       <nav>
-        <div class="row nav__row">
+        <div class="row">
           <div class="nav__logo">
-            <img
-              class="logo"
-              src="./assets/logo.2c489fc453a1783cbadacf914efa3df6.svg"
-              alt=""
-            />
-            <div class="nav__logo--title"><span class="blue">Treact</span></div>
+            <img class="logo" src="./assets/assets/Logo.svg" alt="" />
+            <button class="btn__menu" onclick="openMenu()">
+              <i _ngcontent-serverapp-c129="" class="fas fa-bars"></i>
+            </button>
           </div>
-          <ul class="nav__links">
-            <li><a href="" class="nav__link">About</a></li>
-            <li><a href="" class="nav__link">Blog</a></li>
-            <li><a href="" class="nav__link">Pricing</a></li>
-            <li><a href="" class="nav__link">Contact Us</a></li>
-            <li><a href="" class="nav__link login">Login</a></li>
-            <li>
-              <a href="" class="nav__ link nav__link--primary">Sign Up</a>
-            </li>
-          </ul>
-          <button class="btn__menu" onclick="openMenu()">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="btn__menu--svg"
-            >
-              <line x1="3" y1="12" x2="21" y2="12"></line>
-              <line x1="3" y1="6" x2="21" y2="6"></line>
-              <line x1="3" y1="18" x2="21" y2="18"></line>
-            </svg>
-          </button>
         </div>
       </nav>
       <div class="modal">
         <button class="btn__menu btn__menu--close" onclick="closeMenu()">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="light___StyledCloseIcon-lj69nl-14 fASujC"
-          >
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
+          <i _ngcontent-serverapp-c129="" class="fas fa-times"></i>
         </button>
         <div class="modal__links">
-          <a class="modal__link">About</a>
-          <a class="modal__link">Blog</a>
-          <a class="modal__link">Pricing</a>
-          <a class="modal__link">Contact Us</a>
-          <a class="modal__link">Login</a>
-          <a class="modal__link modal__link--primary">Sign Up</a>
+          <a class="modal__link" href="#">Home</a>
+          <a class="modal__link" href="#works">How It Works</a>
+          <a class="modal__link" href="#features&benefits"
+            >Features & Benefits</a
+          >
+          <a class="modal__link" href="#pricing">Payment Schedule</a>
+          <a class="modal__link" href="#testimonials">Member Testimonials</a>
+          <a class="modal__link" href="#faq">FAQ</a>
+          <a class="modal__link--primary" href="">Join Now</a>
         </div>
       </div>
-      <svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" class="header__blob">
-                <g transform="translate(300,300)">
-                    <path d="M176.2,-106.9C208.7,-45.5,201.8,33.5,165.8,99.4C129.9,165.3,65,218.2,-9.2,223.5C-83.4,228.8,-166.9,186.7,-201.6,121.4C-236.4,56.2,-222.6,-32.2,-180.9,-98.9C-139.1,-165.7,-69.6,-210.8,1.2,-211.5C71.9,-212.2,143.8,-168.3,176.2,-106.9Z" fill="#6415ff"></path>
-                </g>
-            </svg>
+      <div class="banner">
+        "Risk comes from not knowing what you're doing." - Warren Buffett
+      </div>
+      <svg
+        width="1800"
+        height="800"
+        viewBox="0 0 1800 800"
+        xmlns="http://www.w3.org/2000/svg"
+        class="header__blob"
+        role="img"
+        aria-label="Dense curved wave background"
+      >
+        <defs>
+          <!-- Fade waves to the RIGHT -->
+          <linearGradient id="fadeRightDense" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="white" stop-opacity="1" />
+            <stop offset="60%" stop-color="white" stop-opacity="0.85" />
+            <stop offset="85%" stop-color="black" stop-opacity="0.35" />
+            <stop offset="100%" stop-color="black" stop-opacity="0" />
+          </linearGradient>
+          <mask id="maskRightDense">
+            <rect width="1800" height="800" fill="url(#fadeRightDense)" />
+          </mask>
+
+          <!-- Tone variation -->
+          <linearGradient id="inkDarkA" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#272727" />
+            <stop offset="100%" stop-color="#2e2e2e" />
+          </linearGradient>
+          <linearGradient id="inkDarkB" x1="1" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#2a2a2a" />
+            <stop offset="100%" stop-color="#333333" />
+          </linearGradient>
+        </defs>
+
+        <!-- Group shifted down slightly (translate Y = -30 instead of -40) -->
+        <g
+          fill="none"
+          stroke-linecap="round"
+          mask="url(#maskRightDense)"
+          transform="translate(0,-30)"
+        >
+          <!-- 22 tightly packed lines, ~8–10px spacing -->
+          <path
+            d="M 0,240 C 400,180 1100,420 1800,300"
+            stroke="url(#inkDarkA)"
+            stroke-width="1.4"
+            opacity="0.22"
+          />
+          <path
+            d="M 0,250 C 410,190 1090,430 1800,310"
+            stroke="url(#inkDarkB)"
+            stroke-width="1.35"
+            opacity="0.21"
+          />
+          <path
+            d="M 0,260 C 420,200 1080,440 1800,320"
+            stroke="url(#inkDarkA)"
+            stroke-width="1.3"
+            opacity="0.20"
+          />
+          <path
+            d="M 0,270 C 430,210 1070,450 1800,330"
+            stroke="url(#inkDarkB)"
+            stroke-width="1.25"
+            opacity="0.19"
+          />
+          <path
+            d="M 0,280 C 440,220 1060,460 1800,340"
+            stroke="url(#inkDarkA)"
+            stroke-width="1.2"
+            opacity="0.18"
+          />
+          <path
+            d="M 0,290 C 450,230 1050,470 1800,350"
+            stroke="url(#inkDarkB)"
+            stroke-width="1.15"
+            opacity="0.17"
+          />
+          <path
+            d="M 0,300 C 460,240 1040,480 1800,360"
+            stroke="url(#inkDarkA)"
+            stroke-width="1.1"
+            opacity="0.16"
+          />
+          <path
+            d="M 0,310 C 470,250 1030,490 1800,370"
+            stroke="url(#inkDarkB)"
+            stroke-width="1.05"
+            opacity="0.15"
+          />
+          <path
+            d="M 0,320 C 480,260 1020,500 1800,380"
+            stroke="url(#inkDarkA)"
+            stroke-width="1.0"
+            opacity="0.14"
+          />
+          <path
+            d="M 0,330 C 490,270 1010,510 1800,390"
+            stroke="url(#inkDarkB)"
+            stroke-width="1.0"
+            opacity="0.13"
+          />
+          <path
+            d="M 0,340 C 500,280 1000,520 1800,400"
+            stroke="url(#inkDarkA)"
+            stroke-width="0.95"
+            opacity="0.12"
+          />
+          <path
+            d="M 0,350 C 510,290 990,530 1800,410"
+            stroke="url(#inkDarkB)"
+            stroke-width="0.95"
+            opacity="0.12"
+          />
+          <path
+            d="M 0,360 C 520,300 980,540 1800,420"
+            stroke="url(#inkDarkA)"
+            stroke-width="0.9"
+            opacity="0.11"
+          />
+          <path
+            d="M 0,370 C 530,310 970,550 1800,430"
+            stroke="url(#inkDarkB)"
+            stroke-width="0.9"
+            opacity="0.11"
+          />
+          <path
+            d="M 0,380 C 540,320 960,560 1800,440"
+            stroke="url(#inkDarkA)"
+            stroke-width="0.85"
+            opacity="0.10"
+          />
+          <path
+            d="M 0,390 C 550,330 950,570 1800,450"
+            stroke="url(#inkDarkB)"
+            stroke-width="0.85"
+            opacity="0.10"
+          />
+          <path
+            d="M 0,400 C 560,340 940,580 1800,460"
+            stroke="url(#inkDarkA)"
+            stroke-width="0.8"
+            opacity="0.095"
+          />
+          <path
+            d="M 0,410 C 570,350 930,590 1800,470"
+            stroke="url(#inkDarkB)"
+            stroke-width="0.8"
+            opacity="0.095"
+          />
+          <path
+            d="M 0,420 C 580,360 920,600 1800,480"
+            stroke="url(#inkDarkA)"
+            stroke-width="0.75"
+            opacity="0.09"
+          />
+          <path
+            d="M 0,430 C 590,370 910,610 1800,490"
+            stroke="url(#inkDarkB)"
+            stroke-width="0.75"
+            opacity="0.09"
+          />
+          <path
+            d="M 0,440 C 600,380 900,620 1800,500"
+            stroke="url(#inkDarkA)"
+            stroke-width="0.7"
+            opacity="0.085"
+          />
+          <path
+            d="M 0,450 C 610,390 890,630 1800,510"
+            stroke="url(#inkDarkB)"
+            stroke-width="0.7"
+            opacity="0.085"
+          />
+        </g>
+      </svg>
+
       <header>
         <div class="container">
           <div class="row">
             <div class="header__description">
-              <h1>
-                Beautiful React <br />
-                Templates <span class="purple">for you.</span>
-              </h1>
-              <p class="header__description--para">
-                Our templates are easy to setup, understand and customize. Fully
-                modular components with a variety of pages and components.
-              </p>
-              <div class="header__email">
-                <input
-                  type="text"
-                  class="header__email--input"
-                  placeholder="Your E-mail Address"
-                  fdprocessedid="b17n8"
-                />
-                <button class="header__email--btn" fdprocessedid="bn0q31">
-                  Get Started
-                </button>
-              </div>
-              <p class="header__description--customers">
-                OUR TRUSTED CUSTOMERS
-              </p>
-              <img
-                class="header__customer--logos"
-                src="./assets/customers-logo-strip.680ac7c2e8ae28161d2c.png"
-                alt=""
-              />
+              <h1>Real Traders | Real Results | Real Fast</h1>
+              <h2>Join the private community</h2>
+              <h3 class="header__description--para">
+                Built for those who are tired of hype and ready for consistent
+                WINS
+              </h3>
             </div>
-            <figure class="header__img--wrapper">
-              <img
-                class="header__img"
-                src="./assets/design-illustration-2.6da6a00b20c07c4a9b65d1870679e1b8.svg"
-                alt=""
-              />
-            </figure>
+            <div class="header__button--wrapper">
+              <button class="header__button">Join Now</button>
+            </div>
+            <div class="header__video--wrapper">
+              <div class="header__video--container">
+                <video
+                  class="header__video"
+                  src="./assets/assets/Join Selfish Trader.mp4"
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                  controls
+                  poster="./assets/assets/video thumbnail.png"
+                >
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
           </div>
         </div>
       </header>
     </section>
     <main>
-      <section id="features">
+      <section id="works">
         <div class="container">
           <div class="row__narrow">
-            <h3 class="section__tag"><span class="purple">FEATURES</span></h3>
-            <h2 class="section__title">
-              We have Amazing <span class="purple">Service.</span>
-            </h2>
-            <p class="section__para">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam eos
-              non temporibus est assumenda libero perferendis error id minus.
+            <div class="works__description">
+              <figure class="works__gradient">
+                <img
+                  class="works__img"
+                  src="./assets/assets/works-img.png"
+                  alt=""
+                />
+              </figure>
+
+              <div class="works__description--wrapper">
+                <h2 class="works__title">How It Works</h2>
+                <p class="works__para">
+                  Selfish Trader is a no-hype, single-step platform designed for
+                  serious traders. Our process removes the noise, helping you
+                  trade with confidence, clarity, and the tools you need to
+                  succeed from day one.
+                </p>
+              </div>
+            </div>
+            <div class="works__steps">
+              <div class="works__step">
+                <figure class="steps__img--wrapper">
+                  <i class="fas fa-users"></i>
+                </figure>
+                <div class="works__text">
+                  <div class="steps__title">1. Join the Community</div>
+                  <div class="steps__para">
+                    Gain instant access to alerts, market breakdowns & lessons.
+                  </div>
+                </div>
+              </div>
+              <div class="works__step">
+                <div class="steps__img--wrapper">
+                  <i class="fas fa-bullseye"></i>
+                </div>
+                <div class="works__text">
+                  <div class="steps__title">2. Follow the Plan</div>
+                  <div class="steps__para">
+                    Use our strategies, tools, and watchlists to build
+                    confidence.
+                  </div>
+                </div>
+              </div>
+              <div class="works__step">
+                <div class="steps__img--wrapper">
+                  <i class="fas fa-arrow-up-right-dots"></i>
+                </div>
+                <div class="works__text">
+                  <div class="steps__title">3. Trade Smarter, Not Harder</div>
+                  <div class="steps__para">
+                    Grow your account with accountability and support.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <svg
+          class="works__bg"
+          width="1600"
+          height="640"
+          viewBox="0 0 1600 640"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <defs>
+            <!-- Fade BOTH ends -->
+            <linearGradient
+              id="worksFadeBoth"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="0%"
+            >
+              <stop offset="0%" stop-color="black" stop-opacity="0" />
+              <stop offset="15%" stop-color="white" stop-opacity="0.85" />
+              <stop offset="85%" stop-color="white" stop-opacity="0.85" />
+              <stop offset="100%" stop-color="black" stop-opacity="0" />
+            </linearGradient>
+            <mask id="worksMaskBoth">
+              <rect width="1600" height="640" fill="url(#worksFadeBoth)" />
+            </mask>
+
+            <!-- Tone variations -->
+            <linearGradient id="inkA" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#272727" />
+              <stop offset="100%" stop-color="#2e2e2e" />
+            </linearGradient>
+            <linearGradient id="inkB" x1="1" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#2a2a2a" />
+              <stop offset="100%" stop-color="#333333" />
+            </linearGradient>
+          </defs>
+
+          <!-- Lines group, flipped so hump is on right -->
+          <g
+            fill="none"
+            stroke-linecap="round"
+            mask="url(#worksMaskBoth)"
+            transform="translate(0,-10)"
+          >
+            <path
+              d="M1600,246 C1380,150 1080,218 900,260 C620,322 340,328 0,300"
+              stroke="url(#inkA)"
+              stroke-width="1.35"
+              opacity="0.21"
+            />
+            <path
+              d="M1600,256 C1368,160 1080,228 900,268 C615,326 335,334 0,306"
+              stroke="url(#inkB)"
+              stroke-width="1.32"
+              opacity="0.205"
+            />
+            <path
+              d="M1600,266 C1356,172 1080,240 900,276 C610,330 330,340 0,312"
+              stroke="url(#inkA)"
+              stroke-width="1.28"
+              opacity="0.20"
+            />
+            <path
+              d="M1600,276 C1344,184 1080,252 900,284 C605,334 325,346 0,318"
+              stroke="url(#inkB)"
+              stroke-width="1.24"
+              opacity="0.19"
+            />
+
+            <path
+              d="M1600,286 C1332,196 1080,264 900,292 C600,338 320,352 0,324"
+              stroke="url(#inkA)"
+              stroke-width="1.20"
+              opacity="0.18"
+            />
+            <path
+              d="M1600,296 C1320,208 1080,276 900,300 C595,342 315,358 0,330"
+              stroke="url(#inkB)"
+              stroke-width="1.16"
+              opacity="0.17"
+            />
+            <path
+              d="M1600,306 C1308,220 1080,288 900,308 C590,346 310,364 0,336"
+              stroke="url(#inkA)"
+              stroke-width="1.12"
+              opacity="0.165"
+            />
+            <path
+              d="M1600,316 C1296,232 1080,300 900,316 C585,350 305,370 0,342"
+              stroke="url(#inkB)"
+              stroke-width="1.08"
+              opacity="0.16"
+            />
+
+            <path
+              d="M1600,326 C1284,244 1080,312 900,324 C580,354 300,376 0,348"
+              stroke="url(#inkA)"
+              stroke-width="1.04"
+              opacity="0.15"
+            />
+            <path
+              d="M1600,336 C1272,256 1080,324 900,332 C575,358 295,382 0,354"
+              stroke="url(#inkB)"
+              stroke-width="1.00"
+              opacity="0.145"
+            />
+            <path
+              d="M1600,346 C1260,268 1080,336 900,340 C570,362 290,388 0,360"
+              stroke="url(#inkA)"
+              stroke-width="0.98"
+              opacity="0.14"
+            />
+            <path
+              d="M1600,356 C1248,280 1080,348 900,348 C565,366 285,394 0,366"
+              stroke="url(#inkB)"
+              stroke-width="0.96"
+              opacity="0.135"
+            />
+
+            <path
+              d="M1600,366 C1236,292 1080,360 900,356 C560,370 280,400 0,372"
+              stroke="url(#inkA)"
+              stroke-width="0.94"
+              opacity="0.13"
+            />
+            <path
+              d="M1600,376 C1224,304 1080,372 900,364 C555,374 275,406 0,378"
+              stroke="url(#inkB)"
+              stroke-width="0.92"
+              opacity="0.125"
+            />
+            <path
+              d="M1600,386 C1212,316 1080,384 900,372 C550,378 270,412 0,384"
+              stroke="url(#inkA)"
+              stroke-width="0.90"
+              opacity="0.12"
+            />
+            <path
+              d="M1600,396 C1200,328 1080,396 900,380 C545,382 265,418 0,390"
+              stroke="url(#inkB)"
+              stroke-width="0.88"
+              opacity="0.115"
+            />
+
+            <path
+              d="M1600,406 C1188,340 1080,408 900,388 C540,386 260,424 0,396"
+              stroke="url(#inkA)"
+              stroke-width="0.86"
+              opacity="0.11"
+            />
+            <path
+              d="M1600,416 C1176,352 1080,420 900,396 C535,390 255,430 0,402"
+              stroke="url(#inkB)"
+              stroke-width="0.84"
+              opacity="0.105"
+            />
+            <path
+              d="M1600,426 C1164,364 1080,432 900,404 C530,394 250,436 0,408"
+              stroke="url(#inkA)"
+              stroke-width="0.82"
+              opacity="0.10"
+            />
+            <path
+              d="M1600,436 C1152,376 1080,444 900,412 C525,398 245,442 0,414"
+              stroke="url(#inkB)"
+              stroke-width="0.80"
+              opacity="0.095"
+            />
+          </g>
+        </svg>
+      </section>
+      <section id="features__benefits">
+        <div class="container">
+          <div class="row__narrow">
+            <h2 class="features__title">Features and Benefits</h2>
+            <p class="features__description">
+              Everything you need — nothing you don't. Our platform is built to
+              eliminate confusion and help you focus on trading smart.
             </p>
             <div class="features">
-              <div class="feature">
-                <figure class="feature__img--wrapper">
-                  <img
-                    class="feature__img"
-                    src="./assets/shield-icon.daefe14b320b14fbd9cbd18908ac93ec.svg"
-                    alt=""
-                  />
-                </figure>
-                <div class="feature__text">
-                  <div class="feature__title">Secure</div>
-                  <div class="feature__description">
-                    We strictly only deal with vendors that provide top notch
-                    security.
+              <div class="feature__group1">
+                <div class="feature">
+                  <div class="feature__img--wrapper">
+                    <i class="fa-regular fa-bell"></i>
+                  </div>
+                  <div class="feature__text">Daily Stock & Option Alerts</div>
+                </div>
+                <div class="feature">
+                  <div class="feature__img--wrapper">
+                    <i class="fa-regular fa-comment"></i>
+                  </div>
+                  <div class="feature__text">
+                    Weekly Watchiist with Market Breakdown
                   </div>
                 </div>
-              </div>
-              <div class="feature">
-                <figure class="feature__img--wrapper">
-                  <img
-                    class="feature__img"
-                    src="./assets/support-icon.f9253ffa8cb6ffde5bbaa05eb5136375.svg"
-                    alt=""
-                  />
-                </figure>
-                <div class="feature__text">
-                  <div class="feature__title">24/7 Support</div>
-                  <div class="feature__description">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Tempora, iusto.
+                <div class="feature">
+                  <div class="feature__img--wrapper">
+                    <i class="fas fa-book-open"></i>
                   </div>
+                  <div class="feature__text">Education Vault for Beginners</div>
                 </div>
               </div>
-              <div class="feature">
-                <figure class="feature__img--wrapper">
-                  <img
-                    class="feature__img"
-                    src="./assets/customize-icon.367468c90fd796009b97fbfba67b2c6a.svg"
-                    alt=""
-                  />
-                </figure>
-                <div class="feature__text">
-                  <div class="feature__title">Customizable</div>
-                  <div class="feature__description">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Tempora, iusto.
+              <div class="feature__group2">
+                <div class="feature">
+                  <div class="feature__img--wrapper">
+                    <i class="fas fa-calendar-days"></i>
+                  </div>
+                  <div class="feature__text">Sunday & Thursday Classes</div>
+                </div>
+                <div class="feature">
+                  <div class="feature__img--wrapper">
+                    <i class="fas fa-comments"></i>
+                  </div>
+                  <div class="feature__text">
+                    Member Chatroom & Trade Recaps
                   </div>
                 </div>
-              </div>
-              <div class="feature">
-                <figure class="feature__img--wrapper">
-                  <img
-                    class="feature__img"
-                    src="./assets/reliable-icon.1367510a8f0a1bec76dc425d25f92f43.svg"
-                    alt=""
-                  />
-                </figure>
-                <div class="feature__text">
-                  <div class="feature__title">Reliable</div>
-                  <div class="feature__description">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Tempora, iusto.
+                <div class="feature">
+                  <div class="feature__img--wrapper">
+                    <i class="fas fa-trophy"></i>
                   </div>
-                </div>
-              </div>
-              <div class="feature">
-                <figure class="feature__img--wrapper">
-                  <img
-                    class="feature__img"
-                    src="./assets/fast-icon.dbb971a73d4805d2fc3bcdacdb55beba.svg"
-                    alt=""
-                  />
-                </figure>
-                <div class="feature__text">
-                  <div class="feature__title">Fast</div>
-                  <div class="feature__description">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Tempora, iusto.
-                  </div>
-                </div>
-              </div>
-              <div class="feature">
-                <figure class="feature__img--wrapper">
-                  <img
-                    class="feature__img"
-                    src="./assets/simple-icon.673b7e1750b2a4ef32907fc164828d00.svg"
-                    alt=""
-                  />
-                </figure>
-                <div class="feature__text">
-                  <div class="feature__title">Easy</div>
-                  <div class="feature__description">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Tempora, iusto.
-                  </div>
+                  <div class="feature__text">Monthly Challenges for Growth</div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" class="features__blob">
-                <g transform="translate(300,300)">
-                    <path d="M125,-160.4C159.9,-146.7,184.6,-107.3,178.8,-70.9C173.1,-34.4,137,-0.8,128.8,47.3C120.7,95.5,140.6,158.2,123.8,198.4C107,238.6,53.5,256.3,5.4,248.9C-42.7,241.5,-85.4,208.9,-112.7,172.1C-140,135.3,-151.8,94.2,-146.3,59.7C-140.8,25.1,-117.9,-2.9,-104,-30.1C-90.1,-57.3,-85,-83.7,-69.1,-103.5C-53.3,-123.4,-26.6,-136.7,9.2,-149.4C45.1,-162,90.1,-174,125,-160.4Z" fill="#FFB4BC"></path>
-                </g>
-            </svg>
-      </section>
-      <section id="quality">
-        <div class="container">
-          <div class="row">
-            <div class="quality__section">
-              <h3 class="section__tag">
-                <span class="purple">QUALITY WORK</span>
-              </h3>
-              <h2 class="section__title">
-                Designed & Developed by
-                <span class="purple">Professionals.</span>
-              </h2>
-              <p class="section__para">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
-                eius delectus deleniti dolore ea nihil aspernatur aperiam hic?
-                Doloremque magni in voluptate provident incidunt voluptatibus
-                beatae ipsa eum, molestiae debitis recusandae! Aliquid,
-                accusamus minus? Magni eveniet modi ut commodi voluptatum.
-              </p>
-              <button class="btn">Learn More</button>
-            </div>
-            <figure class="quality__img--wrapper">
-              <img
-                class="quality__img"
-                src="./assets/hero-screenshot-1.40a097b525c2f8c9808e.png"
-                alt=""
-              />
-              <svg viewBox="0 0 1280 1280" class="quality__grid">
+        <svg
+          class="comparison__bg"
+          width="1800"
+          height="1000"
+          viewBox="0 0 1800 1000"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <defs>
+            <!-- Horizontal fade: both ends -->
+            <linearGradient id="cmpFadeBothX" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="black" stop-opacity="0" />
+              <stop offset="12%" stop-color="white" stop-opacity="1" />
+              <stop offset="88%" stop-color="white" stop-opacity="1" />
+              <stop offset="100%" stop-color="black" stop-opacity="0" />
+            </linearGradient>
+            <mask id="cmpMaskBothX">
+              <rect width="1800" height="1000" fill="url(#cmpFadeBothX)" />
+            </mask>
+
+            <!-- Vertical vignette -->
+            <linearGradient id="cmpVignetteY" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="white" stop-opacity="0.9" />
+              <stop offset="15%" stop-color="white" stop-opacity="1" />
+              <stop offset="85%" stop-color="white" stop-opacity="1" />
+              <stop offset="100%" stop-color="white" stop-opacity="0.9" />
+            </linearGradient>
+            <mask id="cmpMaskVignetteY">
+              <rect width="1800" height="1000" fill="url(#cmpVignetteY)" />
+            </mask>
+
+            <!-- Tone variations -->
+            <linearGradient id="inkA" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#303030" />
+              <stop offset="100%" stop-color="#3a3a3a" />
+            </linearGradient>
+            <linearGradient id="inkB" x1="1" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#2c2c2c" />
+              <stop offset="100%" stop-color="#404040" />
+            </linearGradient>
+          </defs>
+
+          <g mask="url(#cmpMaskBothX)">
+            <g
+              mask="url(#cmpMaskVignetteY)"
+              fill="none"
+              stroke-linecap="round"
+              opacity="1"
+            >
+              <!-- Field A: bottom-left → top-right -->
+              <g>
+                <!-- 20 lines, ~8px apart -->
                 <path
-                  d="M55 33.5C44.5 37 35 47.6 32.8 58.3c-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM183 33.5c-15.1 5-25.3 21.6-22.2 36.2 2.5 11.9 13.6 23 25.4 25.5 19.4 4.1 39.5-14.2 37.5-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM311 33.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM439 33.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM567 33.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM695 33.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM823 33.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM951 33.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM1079 33.5c-10.5 3.5-20 14.1-22.2 24.8-2.5 11.7 3.2 24.4 14.2 31.9 10.7 7.4 22.9 7.5 33.7.3 17.7-11.8 20.1-33.8 5.3-48.5-8.5-8.6-20.7-11.9-31-8.5zM1207 33.5c-10.5 3.5-20 14.1-22.2 24.8-2.5 11.7 3.2 24.4 14.2 31.9 10.7 7.4 22.9 7.5 33.7.3 17.7-11.8 20.1-33.8 5.3-48.5-8.5-8.6-20.7-11.9-31-8.5zM55 161.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM183 161.5c-15.1 5-25.3 21.6-22.2 36.2 2.5 11.9 13.6 23 25.4 25.5 19.4 4.1 39.5-14.2 37.5-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM311 161.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM439 161.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM567 161.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM695 161.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM823 161.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM951 161.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM1079 161.5c-10.5 3.5-20 14.1-22.2 24.8-2.5 11.7 3.2 24.4 14.2 31.9 10.7 7.4 22.9 7.5 33.7.3 17.7-11.8 20.1-33.8 5.3-48.5-8.5-8.6-20.7-11.9-31-8.5zM1207 161.5c-10.5 3.5-20 14.1-22.2 24.8-2.5 11.7 3.2 24.4 14.2 31.9 10.7 7.4 22.9 7.5 33.7.3 17.7-11.8 20.1-33.8 5.3-48.5-8.5-8.6-20.7-11.9-31-8.5zM55 289.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM183 289.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM311 289.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM439 289.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM567 289.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM695 289.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM823 289.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM951 289.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM1079 289.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM1207 289.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM55 417.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM183 417.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM311 417.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM439 417.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM567 417.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM695 417.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM823 417.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM951 417.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM1079 417.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM1207 417.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM55 545.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM183 545.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM311 545.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM439 545.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM567 545.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM695 545.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM823 545.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM951 545.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM1079 545.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM1207 545.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM55 673.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM183 673.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM311 673.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM439 673.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM567 673.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM695 673.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM823 673.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM951 673.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM1079 673.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM1207 673.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM55 801.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM183 801.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM311 801.5c-10.5 3.5-20 14.1-22.2 24.8-2.5 11.7 3.2 24.4 14.2 31.9 10.7 7.4 22.9 7.5 33.7.3 17.7-11.8 20.1-33.8 5.3-48.5-8.5-8.6-20.7-11.9-31-8.5zM439 801.5c-10.5 3.5-20 14.1-22.2 24.8-2.5 11.7 3.2 24.4 14.2 31.9 10.7 7.4 22.9 7.5 33.7.3 17.7-11.8 20.1-33.8 5.3-48.5-8.5-8.6-20.7-11.9-31-8.5zM567 801.5c-15.1 5-25.3 21.6-22.2 36.2 2.5 11.9 13.6 23 25.5 25.5 19.3 4.1 39.4-14.2 37.4-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM695 801.5c-15.1 5-25.3 21.6-22.2 36.2 2.5 11.9 13.6 23 25.5 25.5 19.3 4.1 39.4-14.2 37.4-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM823 801.5c-15.1 5-25.3 21.6-22.2 36.2 2.5 11.9 13.6 23 25.5 25.5 19.3 4.1 39.4-14.2 37.4-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM951 801.5c-15.1 5-25.3 21.6-22.2 36.2 2.5 11.9 13.6 23 25.5 25.5 19.3 4.1 39.4-14.2 37.4-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM1079 801.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM1207 801.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM55 929.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM183 929.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM311 929.5c-10.5 3.5-20 14.1-22.2 24.8-2.5 11.7 3.2 24.4 14.2 31.9 10.7 7.4 22.9 7.5 33.7.3 17.7-11.8 20.1-33.8 5.3-48.5-8.5-8.6-20.7-11.9-31-8.5zM439 929.5c-10.5 3.5-20 14.1-22.2 24.8-2.5 11.7 3.2 24.4 14.2 31.9 10.7 7.4 22.9 7.5 33.7.3 17.7-11.8 20.1-33.8 5.3-48.5-8.5-8.6-20.7-11.9-31-8.5zM567 929.5c-15.1 5-25.3 21.6-22.2 36.2 2.5 11.9 13.6 23 25.5 25.5 19.3 4.1 39.4-14.2 37.4-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM695 929.5c-15.1 5-25.3 21.6-22.2 36.2 2.5 11.9 13.6 23 25.5 25.5 19.3 4.1 39.4-14.2 37.4-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM823 929.5c-15.1 5-25.3 21.6-22.2 36.2 2.5 11.9 13.6 23 25.5 25.5 19.3 4.1 39.4-14.2 37.4-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM951 929.5c-15.1 5-25.3 21.6-22.2 36.2 2.5 11.9 13.6 23 25.5 25.5 19.3 4.1 39.4-14.2 37.4-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM1079 929.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM1207 929.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM55 1057.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM183 1057.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM311 1057.5c-10.5 3.5-20 14.1-22.2 24.8-2.5 11.7 3.2 24.4 14.2 31.9 10.7 7.4 22.9 7.5 33.7.3 17.7-11.8 20.1-33.8 5.3-48.5-8.5-8.6-20.7-11.9-31-8.5zM439 1057.5c-10.5 3.5-20 14.1-22.2 24.8-2.5 11.7 3.2 24.4 14.2 31.9 10.7 7.4 22.9 7.5 33.7.3 17.7-11.8 20.1-33.8 5.3-48.5-8.5-8.6-20.7-11.9-31-8.5zM567 1057.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM695 1057.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM823 1057.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM951 1057.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM1079 1057.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM1207 1057.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM55 1185.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM183 1185.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM311 1185.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM439 1185.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM567 1185.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM695 1185.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM823 1185.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM951 1185.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM1079 1185.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM1207 1185.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6z"
-                ></path>
-              </svg>
-            </figure>
-          </div>
-        </div>
-      </section>
-      <section id="steps">
-        <div class="container">
-          <div class="row">
-            <figure class="steps__img--wrapper">
-              <img
-                class="steps__img"
-                src="./assets/hero-screenshot-2.241aac1fbc66db29d873.png"
-                alt=""
-              />
-              <svg
-                viewBox="0 0 1280 1280"
-                _css2="[object Object]"
-                class="steps__grid"
-              >
+                  d="M -80,600 C 300,520 600,440 980,500 C 1300,550 1550,600 1820,540"
+                  stroke="url(#inkA)"
+                  stroke-width="1.6"
+                  opacity="0.26"
+                />
                 <path
-                  d="M55 33.5C44.5 37 35 47.6 32.8 58.3c-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM183 33.5c-15.1 5-25.3 21.6-22.2 36.2 2.5 11.9 13.6 23 25.4 25.5 19.4 4.1 39.5-14.2 37.5-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM311 33.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM439 33.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM567 33.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM695 33.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM823 33.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM951 33.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM1079 33.5c-10.5 3.5-20 14.1-22.2 24.8-2.5 11.7 3.2 24.4 14.2 31.9 10.7 7.4 22.9 7.5 33.7.3 17.7-11.8 20.1-33.8 5.3-48.5-8.5-8.6-20.7-11.9-31-8.5zM1207 33.5c-10.5 3.5-20 14.1-22.2 24.8-2.5 11.7 3.2 24.4 14.2 31.9 10.7 7.4 22.9 7.5 33.7.3 17.7-11.8 20.1-33.8 5.3-48.5-8.5-8.6-20.7-11.9-31-8.5zM55 161.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM183 161.5c-15.1 5-25.3 21.6-22.2 36.2 2.5 11.9 13.6 23 25.4 25.5 19.4 4.1 39.5-14.2 37.5-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM311 161.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM439 161.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM567 161.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM695 161.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM823 161.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM951 161.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM1079 161.5c-10.5 3.5-20 14.1-22.2 24.8-2.5 11.7 3.2 24.4 14.2 31.9 10.7 7.4 22.9 7.5 33.7.3 17.7-11.8 20.1-33.8 5.3-48.5-8.5-8.6-20.7-11.9-31-8.5zM1207 161.5c-10.5 3.5-20 14.1-22.2 24.8-2.5 11.7 3.2 24.4 14.2 31.9 10.7 7.4 22.9 7.5 33.7.3 17.7-11.8 20.1-33.8 5.3-48.5-8.5-8.6-20.7-11.9-31-8.5zM55 289.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM183 289.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM311 289.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM439 289.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM567 289.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM695 289.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM823 289.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM951 289.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM1079 289.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM1207 289.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM55 417.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM183 417.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM311 417.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM439 417.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM567 417.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM695 417.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM823 417.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM951 417.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM1079 417.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM1207 417.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM55 545.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM183 545.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM311 545.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM439 545.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM567 545.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM695 545.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM823 545.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM951 545.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM1079 545.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM1207 545.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM55 673.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM183 673.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM311 673.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM439 673.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM567 673.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM695 673.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM823 673.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM951 673.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM1079 673.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM1207 673.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM55 801.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM183 801.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM311 801.5c-10.5 3.5-20 14.1-22.2 24.8-2.5 11.7 3.2 24.4 14.2 31.9 10.7 7.4 22.9 7.5 33.7.3 17.7-11.8 20.1-33.8 5.3-48.5-8.5-8.6-20.7-11.9-31-8.5zM439 801.5c-10.5 3.5-20 14.1-22.2 24.8-2.5 11.7 3.2 24.4 14.2 31.9 10.7 7.4 22.9 7.5 33.7.3 17.7-11.8 20.1-33.8 5.3-48.5-8.5-8.6-20.7-11.9-31-8.5zM567 801.5c-15.1 5-25.3 21.6-22.2 36.2 2.5 11.9 13.6 23 25.5 25.5 19.3 4.1 39.4-14.2 37.4-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM695 801.5c-15.1 5-25.3 21.6-22.2 36.2 2.5 11.9 13.6 23 25.5 25.5 19.3 4.1 39.4-14.2 37.4-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM823 801.5c-15.1 5-25.3 21.6-22.2 36.2 2.5 11.9 13.6 23 25.5 25.5 19.3 4.1 39.4-14.2 37.4-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM951 801.5c-15.1 5-25.3 21.6-22.2 36.2 2.5 11.9 13.6 23 25.5 25.5 19.3 4.1 39.4-14.2 37.4-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM1079 801.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM1207 801.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM55 929.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM183 929.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM311 929.5c-10.5 3.5-20 14.1-22.2 24.8-2.5 11.7 3.2 24.4 14.2 31.9 10.7 7.4 22.9 7.5 33.7.3 17.7-11.8 20.1-33.8 5.3-48.5-8.5-8.6-20.7-11.9-31-8.5zM439 929.5c-10.5 3.5-20 14.1-22.2 24.8-2.5 11.7 3.2 24.4 14.2 31.9 10.7 7.4 22.9 7.5 33.7.3 17.7-11.8 20.1-33.8 5.3-48.5-8.5-8.6-20.7-11.9-31-8.5zM567 929.5c-15.1 5-25.3 21.6-22.2 36.2 2.5 11.9 13.6 23 25.5 25.5 19.3 4.1 39.4-14.2 37.4-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM695 929.5c-15.1 5-25.3 21.6-22.2 36.2 2.5 11.9 13.6 23 25.5 25.5 19.3 4.1 39.4-14.2 37.4-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM823 929.5c-15.1 5-25.3 21.6-22.2 36.2 2.5 11.9 13.6 23 25.5 25.5 19.3 4.1 39.4-14.2 37.4-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM951 929.5c-15.1 5-25.3 21.6-22.2 36.2 2.5 11.9 13.6 23 25.5 25.5 19.3 4.1 39.4-14.2 37.4-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM1079 929.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM1207 929.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM55 1057.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM183 1057.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM311 1057.5c-10.5 3.5-20 14.1-22.2 24.8-2.5 11.7 3.2 24.4 14.2 31.9 10.7 7.4 22.9 7.5 33.7.3 17.7-11.8 20.1-33.8 5.3-48.5-8.5-8.6-20.7-11.9-31-8.5zM439 1057.5c-10.5 3.5-20 14.1-22.2 24.8-2.5 11.7 3.2 24.4 14.2 31.9 10.7 7.4 22.9 7.5 33.7.3 17.7-11.8 20.1-33.8 5.3-48.5-8.5-8.6-20.7-11.9-31-8.5zM567 1057.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM695 1057.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM823 1057.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM951 1057.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM1079 1057.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM1207 1057.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM55 1185.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM183 1185.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM311 1185.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM439 1185.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM567 1185.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM695 1185.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM823 1185.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM951 1185.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM1079 1185.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM1207 1185.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6z"
-                ></path>
-              </svg>
-            </figure>
-            <div class="steps__section">
-              <h3 class="section__tag">
-                <span class="purple">STEPS</span>
-              </h3>
-              <h2 class="section__title">
-                Easy to
-                <span class="purple"
-                  >Get <br />
-                  Started.</span
-                >
-              </h2>
-              <div class="steps">
-                <div class="step">
-                  <div class="step__number">01</div>
-                  <div class="step__description">
-                    <div class="step__title">Register</div>
-                    <div class="step__para">
-                      Create an account with us using Google or Facebook.
-                    </div>
-                  </div>
-                </div>
-                <div class="step">
-                  <div class="step__number">02</div>
-                  <div class="step__description">
-                    <div class="step__title">Download</div>
-                    <div class="step__para">
-                      Browse and Download the template that you like from the
-                      marketplace.
-                    </div>
-                  </div>
-                </div>
-                <div class="step">
-                  <div class="step__number">03</div>
-                  <div class="step__description">
-                    <div class="step__title">Run</div>
-                    <div class="step__para">
-                      Follow the instructions to setup and customize the
-                      template to your needs.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+                  d="M -80,608 C 300,528 600,448 980,508 C 1305,558 1555,608 1820,548"
+                  stroke="url(#inkB)"
+                  stroke-width="1.55"
+                  opacity="0.25"
+                />
+                <path
+                  d="M -80,616 C 300,536 600,456 980,516 C 1310,566 1560,616 1820,556"
+                  stroke="url(#inkA)"
+                  stroke-width="1.5"
+                  opacity="0.24"
+                />
+                <path
+                  d="M -80,624 C 300,544 600,464 980,524 C 1315,574 1565,624 1820,564"
+                  stroke="url(#inkB)"
+                  stroke-width="1.45"
+                  opacity="0.23"
+                />
+                <path
+                  d="M -80,632 C 300,552 600,472 980,532 C 1320,582 1570,632 1820,572"
+                  stroke="url(#inkA)"
+                  stroke-width="1.4"
+                  opacity="0.22"
+                />
+                <path
+                  d="M -80,640 C 300,560 600,480 980,540 C 1325,590 1575,640 1820,580"
+                  stroke="url(#inkB)"
+                  stroke-width="1.35"
+                  opacity="0.21"
+                />
+                <path
+                  d="M -80,648 C 300,568 600,488 980,548 C 1330,598 1580,648 1820,588"
+                  stroke="url(#inkA)"
+                  stroke-width="1.3"
+                  opacity="0.20"
+                />
+                <path
+                  d="M -80,656 C 300,576 600,496 980,556 C 1335,606 1585,656 1820,596"
+                  stroke="url(#inkB)"
+                  stroke-width="1.25"
+                  opacity="0.19"
+                />
+                <path
+                  d="M -80,664 C 300,584 600,504 980,564 C 1340,614 1590,664 1820,604"
+                  stroke="url(#inkA)"
+                  stroke-width="1.2"
+                  opacity="0.18"
+                />
+                <path
+                  d="M -80,672 C 300,592 600,512 980,572 C 1345,622 1595,672 1820,612"
+                  stroke="url(#inkB)"
+                  stroke-width="1.15"
+                  opacity="0.17"
+                />
+                <path
+                  d="M -80,680 C 300,600 600,520 980,580 C 1350,630 1600,680 1820,620"
+                  stroke="url(#inkA)"
+                  stroke-width="1.1"
+                  opacity="0.16"
+                />
+                <path
+                  d="M -80,688 C 300,608 600,528 980,588 C 1355,638 1605,688 1820,628"
+                  stroke="url(#inkB)"
+                  stroke-width="1.05"
+                  opacity="0.155"
+                />
+                <path
+                  d="M -80,696 C 300,616 600,536 980,596 C 1360,646 1610,696 1820,636"
+                  stroke="url(#inkA)"
+                  stroke-width="1.0"
+                  opacity="0.15"
+                />
+                <path
+                  d="M -80,704 C 300,624 600,544 980,604 C 1365,654 1615,704 1820,644"
+                  stroke="url(#inkB)"
+                  stroke-width="0.98"
+                  opacity="0.145"
+                />
+                <path
+                  d="M -80,712 C 300,632 600,552 980,612 C 1370,662 1620,712 1820,652"
+                  stroke="url(#inkA)"
+                  stroke-width="0.96"
+                  opacity="0.14"
+                />
+                <path
+                  d="M -80,720 C 300,640 600,560 980,620 C 1375,670 1625,720 1820,660"
+                  stroke="url(#inkB)"
+                  stroke-width="0.94"
+                  opacity="0.135"
+                />
+                <path
+                  d="M -80,728 C 300,648 600,568 980,628 C 1380,678 1630,728 1820,668"
+                  stroke="url(#inkA)"
+                  stroke-width="0.92"
+                  opacity="0.13"
+                />
+                <path
+                  d="M -80,736 C 300,656 600,576 980,636 C 1385,686 1635,736 1820,676"
+                  stroke="url(#inkB)"
+                  stroke-width="0.9"
+                  opacity="0.125"
+                />
+                <path
+                  d="M -80,744 C 300,664 600,584 980,644 C 1390,694 1640,744 1820,684"
+                  stroke="url(#inkA)"
+                  stroke-width="0.88"
+                  opacity="0.12"
+                />
+                <path
+                  d="M -80,752 C 300,672 600,592 980,652 C 1395,702 1645,752 1820,692"
+                  stroke="url(#inkB)"
+                  stroke-width="0.86"
+                  opacity="0.115"
+                />
+              </g>
+
+              <!-- Field B: top-left → bottom-right -->
+              <g opacity="0.9">
+                <path
+                  d="M -80,220 C 320,280 600,340 960,300 C 1280,270 1540,260 1820,300"
+                  stroke="url(#inkB)"
+                  stroke-width="1.4"
+                  opacity="0.22"
+                />
+                <path
+                  d="M -80,232 C 320,292 600,352 960,312 C 1285,282 1545,272 1820,312"
+                  stroke="url(#inkA)"
+                  stroke-width="1.35"
+                  opacity="0.215"
+                />
+                <path
+                  d="M -80,244 C 320,304 600,364 960,324 C 1290,294 1550,284 1820,324"
+                  stroke="url(#inkB)"
+                  stroke-width="1.3"
+                  opacity="0.21"
+                />
+                <path
+                  d="M -80,256 C 320,316 600,376 960,336 C 1295,306 1555,296 1820,336"
+                  stroke="url(#inkA)"
+                  stroke-width="1.25"
+                  opacity="0.205"
+                />
+                <path
+                  d="M -80,268 C 320,328 600,388 960,348 C 1300,318 1560,308 1820,348"
+                  stroke="url(#inkB)"
+                  stroke-width="1.2"
+                  opacity="0.20"
+                />
+                <path
+                  d="M -80,280 C 320,340 600,400 960,360 C 1305,330 1565,320 1820,360"
+                  stroke="url(#inkA)"
+                  stroke-width="1.15"
+                  opacity="0.195"
+                />
+                <path
+                  d="M -80,292 C 320,352 600,412 960,372 C 1310,342 1570,332 1820,372"
+                  stroke="url(#inkB)"
+                  stroke-width="1.1"
+                  opacity="0.19"
+                />
+                <path
+                  d="M -80,304 C 320,364 600,424 960,384 C 1315,354 1575,344 1820,384"
+                  stroke="url(#inkA)"
+                  stroke-width="1.05"
+                  opacity="0.185"
+                />
+                <path
+                  d="M -80,316 C 320,376 600,436 960,396 C 1320,366 1580,356 1820,396"
+                  stroke="url(#inkB)"
+                  stroke-width="1.0"
+                  opacity="0.18"
+                />
+                <path
+                  d="M -80,328 C 320,388 600,448 960,408 C 1325,378 1585,368 1820,408"
+                  stroke="url(#inkA)"
+                  stroke-width="0.98"
+                  opacity="0.175"
+                />
+              </g>
+            </g>
+          </g>
+        </svg>
       </section>
-      <section id="values">
+      <section id="comparison">
         <div class="container">
           <div class="row">
-            <div class="values__section">
-              <h3 class="section__tag">
-                <span class="purple">VALUES</span>
-              </h3>
-              <h2 class="section__title">
-                We Always <br />
-                Abide by Our
-                <span class="purple">Principles.</span>
-              </h2>
-              <p class="section__para">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
-                distinctio, eum magnam quo eos assumenda odit sit reiciendis
-                doloremque hic nihil placeat ducimus iste maxime voluptatibus,
-                nisi aliquid nesciunt! Natus?
-              </p>
-              <div class="values__list">
-                <div class="value">
-                  <div class="value__title">
-                    <figure class="value__img--wrapper">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="rgba(39, 103, 73, 1)"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="value__img"
-                      >
-                        <line x1="12" y1="1" x2="12" y2="23"></line>
-                        <path
-                          d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
-                        ></path>
-                      </svg>
-                    </figure>
-                    <div class="value__name">Affordable</div>
-                  </div>
-                  <div class="value__description">
-                    We promise to offer you the best rate we can - at par with
-                    the industry standard.
-                  </div>
-                </div>
-                <div class="value">
-                  <div class="value__title">
-                    <figure class="value__img--wrapper">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="rgba(155, 44, 44, 1)"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="value__img"
-                      >
-                        <rect
-                          x="2"
-                          y="7"
-                          width="20"
-                          height="14"
-                          rx="2"
-                          ry="2"
-                        ></rect>
-                        <path
-                          d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"
-                        ></path>
-                      </svg>
-                    </figure>
-                    <div class="value__name">Professionalism</div>
-                  </div>
-                  <div class="value__description">
-                    We assure you that our templates are designed and created by
-                    professional designers.
-                  </div>
-                </div>
-              </div>
-              <button class="btn">Learn More</button>
-            </div>
-            <figure class="values__img--wrapper">
-              <img
-                class="values__img"
-                src="./assets/prototype-illustration.21bc4b3f612a2f257c3d361067582485.svg"
-                alt=""
-              />
-            </figure>
+            <h2>
+              Why Join Selfish Trader Community Vs. Learning & Trading Alone
+            </h2>
+            <p>
+              The table below highlights how Selfish Trader stands apart from
+              solo trading. We design our platform and services to guide traders
+              from day one with expert support and proven strategies.
+            </p>
+            <table class="comparison__table">
+              <thead>
+                <tr>
+                  <th>Attributes</th>
+                  <th>Selfish Trader Community</th>
+                  <th>On Your Own</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Account Setup</td>
+                  <td>
+                    No need to navigate platforms solo. We help members set up
+                    accounts and trading tools with ease.
+                  </td>
+                  <td>
+                    Confusing broker options, technical setup, and delayed
+                    starts.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Strategy &amp; Education</td>
+                  <td>
+                    Proven strategies, beginner-friendly lessons, and real-time
+                    alerts from experienced traders.
+                  </td>
+                  <td>
+                    Trial-and-error learning with no guidance or accountability.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Community Support</td>
+                  <td>
+                    You're never alone. Get feedback, mentorship, and motivation
+                    in our active trader community.
+                  </td>
+                  <td>
+                    Solo trading often leads to burnout, doubt, and slow
+                    progress.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Capital Efficient</td>
+                  <td>
+                    Learn smart risk management while growing — without gambling
+                    your life savings.
+                  </td>
+                  <td>
+                    Most traders blow accounts due to overleveraging and lack of
+                    structure.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Real Results</td>
+                  <td>
+                    Focused, consistent wins. Designed for those serious about
+                    mastering the markets.
+                  </td>
+                  <td>
+                    Results vary widely. Many give up without direction or
+                    support.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
+        <svg
+          class="comparison__bg"
+          width="1800"
+          height="1000"
+          viewBox="0 0 1800 1000"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <defs>
+            <!-- Horizontal fade: both ends -->
+            <linearGradient id="cmpFadeBothX" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="black" stop-opacity="0" />
+              <stop offset="12%" stop-color="white" stop-opacity="1" />
+              <stop offset="88%" stop-color="white" stop-opacity="1" />
+              <stop offset="100%" stop-color="black" stop-opacity="0" />
+            </linearGradient>
+            <mask id="cmpMaskBothX">
+              <rect width="1800" height="1000" fill="url(#cmpFadeBothX)" />
+            </mask>
+
+            <!-- Vertical vignette -->
+            <linearGradient id="cmpVignetteY" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="white" stop-opacity="0.9" />
+              <stop offset="15%" stop-color="white" stop-opacity="1" />
+              <stop offset="85%" stop-color="white" stop-opacity="1" />
+              <stop offset="100%" stop-color="white" stop-opacity="0.9" />
+            </linearGradient>
+            <mask id="cmpMaskVignetteY">
+              <rect width="1800" height="1000" fill="url(#cmpVignetteY)" />
+            </mask>
+
+            <!-- Tone variations -->
+            <linearGradient id="inkA" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#303030" />
+              <stop offset="100%" stop-color="#3a3a3a" />
+            </linearGradient>
+            <linearGradient id="inkB" x1="1" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#2c2c2c" />
+              <stop offset="100%" stop-color="#404040" />
+            </linearGradient>
+          </defs>
+
+          <g mask="url(#cmpMaskBothX)">
+            <g
+              mask="url(#cmpMaskVignetteY)"
+              fill="none"
+              stroke-linecap="round"
+              opacity="1"
+            >
+              <!-- Field A: bottom-left → top-right -->
+              <g>
+                <!-- 20 lines, ~8px apart -->
+                <path
+                  d="M -80,600 C 300,520 600,440 980,500 C 1300,550 1550,600 1820,540"
+                  stroke="url(#inkA)"
+                  stroke-width="1.6"
+                  opacity="0.26"
+                />
+                <path
+                  d="M -80,608 C 300,528 600,448 980,508 C 1305,558 1555,608 1820,548"
+                  stroke="url(#inkB)"
+                  stroke-width="1.55"
+                  opacity="0.25"
+                />
+                <path
+                  d="M -80,616 C 300,536 600,456 980,516 C 1310,566 1560,616 1820,556"
+                  stroke="url(#inkA)"
+                  stroke-width="1.5"
+                  opacity="0.24"
+                />
+                <path
+                  d="M -80,624 C 300,544 600,464 980,524 C 1315,574 1565,624 1820,564"
+                  stroke="url(#inkB)"
+                  stroke-width="1.45"
+                  opacity="0.23"
+                />
+                <path
+                  d="M -80,632 C 300,552 600,472 980,532 C 1320,582 1570,632 1820,572"
+                  stroke="url(#inkA)"
+                  stroke-width="1.4"
+                  opacity="0.22"
+                />
+                <path
+                  d="M -80,640 C 300,560 600,480 980,540 C 1325,590 1575,640 1820,580"
+                  stroke="url(#inkB)"
+                  stroke-width="1.35"
+                  opacity="0.21"
+                />
+                <path
+                  d="M -80,648 C 300,568 600,488 980,548 C 1330,598 1580,648 1820,588"
+                  stroke="url(#inkA)"
+                  stroke-width="1.3"
+                  opacity="0.20"
+                />
+                <path
+                  d="M -80,656 C 300,576 600,496 980,556 C 1335,606 1585,656 1820,596"
+                  stroke="url(#inkB)"
+                  stroke-width="1.25"
+                  opacity="0.19"
+                />
+                <path
+                  d="M -80,664 C 300,584 600,504 980,564 C 1340,614 1590,664 1820,604"
+                  stroke="url(#inkA)"
+                  stroke-width="1.2"
+                  opacity="0.18"
+                />
+                <path
+                  d="M -80,672 C 300,592 600,512 980,572 C 1345,622 1595,672 1820,612"
+                  stroke="url(#inkB)"
+                  stroke-width="1.15"
+                  opacity="0.17"
+                />
+                <path
+                  d="M -80,680 C 300,600 600,520 980,580 C 1350,630 1600,680 1820,620"
+                  stroke="url(#inkA)"
+                  stroke-width="1.1"
+                  opacity="0.16"
+                />
+                <path
+                  d="M -80,688 C 300,608 600,528 980,588 C 1355,638 1605,688 1820,628"
+                  stroke="url(#inkB)"
+                  stroke-width="1.05"
+                  opacity="0.155"
+                />
+                <path
+                  d="M -80,696 C 300,616 600,536 980,596 C 1360,646 1610,696 1820,636"
+                  stroke="url(#inkA)"
+                  stroke-width="1.0"
+                  opacity="0.15"
+                />
+                <path
+                  d="M -80,704 C 300,624 600,544 980,604 C 1365,654 1615,704 1820,644"
+                  stroke="url(#inkB)"
+                  stroke-width="0.98"
+                  opacity="0.145"
+                />
+                <path
+                  d="M -80,712 C 300,632 600,552 980,612 C 1370,662 1620,712 1820,652"
+                  stroke="url(#inkA)"
+                  stroke-width="0.96"
+                  opacity="0.14"
+                />
+                <path
+                  d="M -80,720 C 300,640 600,560 980,620 C 1375,670 1625,720 1820,660"
+                  stroke="url(#inkB)"
+                  stroke-width="0.94"
+                  opacity="0.135"
+                />
+                <path
+                  d="M -80,728 C 300,648 600,568 980,628 C 1380,678 1630,728 1820,668"
+                  stroke="url(#inkA)"
+                  stroke-width="0.92"
+                  opacity="0.13"
+                />
+                <path
+                  d="M -80,736 C 300,656 600,576 980,636 C 1385,686 1635,736 1820,676"
+                  stroke="url(#inkB)"
+                  stroke-width="0.9"
+                  opacity="0.125"
+                />
+                <path
+                  d="M -80,744 C 300,664 600,584 980,644 C 1390,694 1640,744 1820,684"
+                  stroke="url(#inkA)"
+                  stroke-width="0.88"
+                  opacity="0.12"
+                />
+                <path
+                  d="M -80,752 C 300,672 600,592 980,652 C 1395,702 1645,752 1820,692"
+                  stroke="url(#inkB)"
+                  stroke-width="0.86"
+                  opacity="0.115"
+                />
+              </g>
+
+              <!-- Field B: top-left → bottom-right -->
+              <g opacity="0.9">
+                <path
+                  d="M -80,220 C 320,280 600,340 960,300 C 1280,270 1540,260 1820,300"
+                  stroke="url(#inkB)"
+                  stroke-width="1.4"
+                  opacity="0.22"
+                />
+                <path
+                  d="M -80,232 C 320,292 600,352 960,312 C 1285,282 1545,272 1820,312"
+                  stroke="url(#inkA)"
+                  stroke-width="1.35"
+                  opacity="0.215"
+                />
+                <path
+                  d="M -80,244 C 320,304 600,364 960,324 C 1290,294 1550,284 1820,324"
+                  stroke="url(#inkB)"
+                  stroke-width="1.3"
+                  opacity="0.21"
+                />
+                <path
+                  d="M -80,256 C 320,316 600,376 960,336 C 1295,306 1555,296 1820,336"
+                  stroke="url(#inkA)"
+                  stroke-width="1.25"
+                  opacity="0.205"
+                />
+                <path
+                  d="M -80,268 C 320,328 600,388 960,348 C 1300,318 1560,308 1820,348"
+                  stroke="url(#inkB)"
+                  stroke-width="1.2"
+                  opacity="0.20"
+                />
+                <path
+                  d="M -80,280 C 320,340 600,400 960,360 C 1305,330 1565,320 1820,360"
+                  stroke="url(#inkA)"
+                  stroke-width="1.15"
+                  opacity="0.195"
+                />
+                <path
+                  d="M -80,292 C 320,352 600,412 960,372 C 1310,342 1570,332 1820,372"
+                  stroke="url(#inkB)"
+                  stroke-width="1.1"
+                  opacity="0.19"
+                />
+                <path
+                  d="M -80,304 C 320,364 600,424 960,384 C 1315,354 1575,344 1820,384"
+                  stroke="url(#inkA)"
+                  stroke-width="1.05"
+                  opacity="0.185"
+                />
+                <path
+                  d="M -80,316 C 320,376 600,436 960,396 C 1320,366 1580,356 1820,396"
+                  stroke="url(#inkB)"
+                  stroke-width="1.0"
+                  opacity="0.18"
+                />
+                <path
+                  d="M -80,328 C 320,388 600,448 960,408 C 1325,378 1585,368 1820,408"
+                  stroke="url(#inkA)"
+                  stroke-width="0.98"
+                  opacity="0.175"
+                />
+              </g>
+            </g>
+          </g>
+        </svg>
       </section>
       <section id="pricing">
         <div class="container">
           <div class="row">
-            <h3 class="section__tag">
-              <span class="purple">PRICING</span>
-            </h3>
-            <h2 class="section__title">
-              Reasonable & Flexible
-              <span class="purple">Plans.</span>
-            </h2>
-            <p class="section__para">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-              minima possimus ea facilis consequatur quod.
+            <h2>Choose Your Payment Schedule</h2>
+            <p class="schedule__description">
+              No matter how you pay, the value stays the same — choose the
+              billing cycle that works for you.
             </p>
-            <div class="plans">
-              <div class="plan">
-                <div class="plan__stripe"></div>
-                <div class="plan__top">
-                  <div class="plan__type">PERSONAL</div>
-                  <div class="plan__price">$17.99</div>
-                  <div class="plan__duration">MONTHLY</div>
+            <h3 class="schedule__header"></h3>
+
+            <div class="pricing-container">
+              <!-- Left Toggle Panel -->
+              <div class="pricing-left">
+                <div class="plan-option active" data-plan="weekly">
+                  <h3>Weekly</h3>
+                  <div class="price">$12.50</div>
+                  <p class="billing">Billed Every Week</p>
                 </div>
-                <div class="plan__middle">
-                  <div class="plan__target">For Individuals</div>
-                  <div class="plan__feature">30 Templates</div>
-                  <div class="plan__feature">7 Landing Pages</div>
-                  <div class="plan__feature">12 Internal Pages</div>
-                  <div class="plan__feature">Basic Assistance</div>
+                <div class="plan-option" data-plan="biweekly">
+                  <h3>Biweekly</h3>
+                  <div class="price">$25</div>
+                  <p class="billing">Billed Biweekly</p>
                 </div>
-                <div class="plan__bottom">
-                  <button class="plan__button">Buy Now</button>
+                <div class="plan-option" data-plan="monthly">
+                  <h3>Monthly</h3>
+                  <div class="price">$50</div>
+                  <p class="billing">Billed Monthly</p>
                 </div>
-              </div>
-              <div class="plan">
-                <div class="plan__stripe"></div>
-                <div class="plan__top">
-                  <div class="plan__type">BUSINESS</div>
-                  <div class="plan__price">$37.99</div>
-                  <div class="plan__duration">MONTHLY</div>
-                </div>
-                <div class="plan__middle">
-                  <div class="plan__target">For Small Businesses</div>
-                  <div class="plan__feature">60 Templates</div>
-                  <div class="plan__feature">15 Landing Pages</div>
-                  <div class="plan__feature">22 Internal Pages</div>
-                  <div class="plan__feature">Priority Assistance</div>
-                </div>
-                <div class="plan__bottom">
-                  <button class="plan__button">Buy Now</button>
+                <div class="plan-option" data-plan="annually">
+                  <h3>Annually</h3>
+                  <div class="price">$600</div>
+                  <p class="billing">Billed Annually</p>
                 </div>
               </div>
-              <div class="plan">
-                <div class="plan__stripe"></div>
-                <div class="plan__top">
-                  <div class="plan__type">ENTERPRISE</div>
-                  <div class="plan__price">$57.99</div>
-                  <div class="plan__duration">MONTHLY</div>
-                </div>
-                <div class="plan__middle">
-                  <div class="plan__target">For Large Companies</div>
-                  <div class="plan__feature">90 Templates</div>
-                  <div class="plan__feature">27 Landing Pages</div>
-                  <div class="plan__feature">37 Internal Pages</div>
-                  <div class="plan__feature">Personal Assistance</div>
-                </div>
-                <div class="plan__bottom">
-                  <button class="plan__button">Buy Now</button>
-                </div>
+
+              <!-- Right Info Panel -->
+              <div class="pricing-right" id="plan-details">
+                <h2>Weekly Plan</h2>
+                <p class="monthly-price">$12.50 billed weekly</p>
+                <ul class="plan-info">
+                  <li><strong>Access:</strong> Full features</li>
+                  <li><strong>Support:</strong> Email & chat</li>
+                  <li><strong>Commitment:</strong> Cancel anytime</li>
+                </ul>
+                <button class="start-btn">START NOW</button>
               </div>
-              <svg
-                width="600"
-                height="600"
-                viewBox="0 0 600 600"
-                xmlns="http://www.w3.org/2000/svg"
-                class="plans__blob"
-              >
-                <g transform="translate(300,300)">
-                  <path
-                    d="M82,-98.3C129.8,-57.7,208.2,-54.1,229.6,-26.6C251.1,1,215.6,52.5,172.9,74.9C130.2,97.2,80.3,90.4,37.8,107.5C-4.8,124.7,-40,165.7,-63.3,162.3C-86.5,158.8,-97.8,110.9,-109.3,72.2C-120.7,33.5,-132.2,4.1,-140.1,-37.4C-147.9,-79,-152.1,-132.6,-128.1,-177.3C-104.1,-222.1,-52.1,-258,-17.5,-237.2C17.1,-216.4,34.3,-138.9,82,-98.3Z"
-                    fill="#FFB4BC"
-                  ></path>
-                </g>
-              </svg>
             </div>
           </div>
         </div>
+        <svg
+          class="pricing__bg"
+          width="2200"
+          height="1200"
+          viewBox="0 0 2400 1200"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <defs>
+            <!-- Stroke tones -->
+            <linearGradient id="inkG" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#2c2c2c" />
+              <stop offset="100%" stop-color="#404040" />
+            </linearGradient>
+            <linearGradient id="inkH" x1="1" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#2b2b2b" />
+              <stop offset="100%" stop-color="#3a3a3a" />
+            </linearGradient>
+
+            <!-- Gentle center wash -->
+            <radialGradient id="softFill" cx="50%" cy="50%" r="62%">
+              <stop offset="0%" stop-color="#1b1b1b" stop-opacity="0.22" />
+              <stop offset="100%" stop-color="#121212" stop-opacity="0" />
+            </radialGradient>
+
+            <!-- Mask X: fade both horizontal ends (keep full width look) -->
+            <linearGradient id="fadeX" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="black" stop-opacity="0" />
+              <stop offset="12%" stop-color="white" stop-opacity="1" />
+              <stop offset="88%" stop-color="white" stop-opacity="1" />
+              <stop offset="100%" stop-color="black" stop-opacity="0" />
+            </linearGradient>
+            <mask id="maskX">
+              <rect width="2400" height="1200" fill="url(#fadeX)" />
+            </mask>
+
+            <!-- Mask Y: stronger top/bottom fade (limit vertical overlap) -->
+            <linearGradient id="fadeY" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="black" stop-opacity="0" />
+              <stop offset="20%" stop-color="white" stop-opacity="0.95" />
+              <stop offset="80%" stop-color="white" stop-opacity="0.95" />
+              <stop offset="100%" stop-color="black" stop-opacity="0" />
+            </linearGradient>
+            <mask id="maskY">
+              <rect width="2400" height="1200" fill="url(#fadeY)" />
+            </mask>
+
+            <!-- Mask R: soft radial edge fade -->
+            <radialGradient id="fadeR" cx="50%" cy="50%" r="80%">
+              <stop offset="0%" stop-color="white" stop-opacity="1" />
+              <stop offset="70%" stop-color="white" stop-opacity="0.92" />
+              <stop offset="100%" stop-color="black" stop-opacity="0" />
+            </radialGradient>
+            <mask id="maskR">
+              <rect width="2400" height="1200" fill="url(#fadeR)" />
+            </mask>
+          </defs>
+
+          <!-- center glow -->
+          <ellipse
+            cx="1200"
+            cy="600"
+            rx="640"
+            ry="210"
+            fill="url(#softFill)"
+            opacity="0.6"
+          />
+
+          <!-- Rings (centered), reach the sides but fade top/bottom sooner -->
+          <g fill="none" stroke-linecap="round" mask="url(#maskX)">
+            <g mask="url(#maskY)">
+              <g mask="url(#maskR)">
+                <!-- Center at (1200,600). Radii go out to ~1200 for side coverage -->
+                <!-- Increase density by adding more steps if desired -->
+                <circle
+                  cx="1200"
+                  cy="600"
+                  r="100"
+                  stroke="url(#inkG)"
+                  stroke-width="1.3"
+                  opacity="0.24"
+                />
+                <circle
+                  cx="1200"
+                  cy="600"
+                  r="140"
+                  stroke="url(#inkH)"
+                  stroke-width="1.35"
+                  opacity="0.245"
+                />
+                <circle
+                  cx="1200"
+                  cy="600"
+                  r="180"
+                  stroke="url(#inkG)"
+                  stroke-width="1.4"
+                  opacity="0.25"
+                />
+                <circle
+                  cx="1200"
+                  cy="600"
+                  r="220"
+                  stroke="url(#inkH)"
+                  stroke-width="1.45"
+                  opacity="0.255"
+                />
+                <circle
+                  cx="1200"
+                  cy="600"
+                  r="260"
+                  stroke="url(#inkG)"
+                  stroke-width="1.5"
+                  opacity="0.26"
+                />
+                <circle
+                  cx="1200"
+                  cy="600"
+                  r="300"
+                  stroke="url(#inkH)"
+                  stroke-width="1.55"
+                  opacity="0.265"
+                />
+                <circle
+                  cx="1200"
+                  cy="600"
+                  r="340"
+                  stroke="url(#inkG)"
+                  stroke-width="1.6"
+                  opacity="0.27"
+                />
+                <circle
+                  cx="1200"
+                  cy="600"
+                  r="380"
+                  stroke="url(#inkH)"
+                  stroke-width="1.65"
+                  opacity="0.275"
+                />
+                <circle
+                  cx="1200"
+                  cy="600"
+                  r="420"
+                  stroke="url(#inkG)"
+                  stroke-width="1.7"
+                  opacity="0.28"
+                />
+                <circle
+                  cx="1200"
+                  cy="600"
+                  r="460"
+                  stroke="url(#inkH)"
+                  stroke-width="1.75"
+                  opacity="0.285"
+                />
+                <circle
+                  cx="1200"
+                  cy="600"
+                  r="500"
+                  stroke="url(#inkG)"
+                  stroke-width="1.8"
+                  opacity="0.29"
+                />
+                <circle
+                  cx="1200"
+                  cy="600"
+                  r="540"
+                  stroke="url(#inkH)"
+                  stroke-width="1.85"
+                  opacity="0.295"
+                />
+                <circle
+                  cx="1200"
+                  cy="600"
+                  r="580"
+                  stroke="url(#inkG)"
+                  stroke-width="1.9"
+                  opacity="0.30"
+                />
+                <circle
+                  cx="1200"
+                  cy="600"
+                  r="620"
+                  stroke="url(#inkH)"
+                  stroke-width="1.95"
+                  opacity="0.30"
+                />
+                <circle
+                  cx="1200"
+                  cy="600"
+                  r="660"
+                  stroke="url(#inkG)"
+                  stroke-width="2.0"
+                  opacity="0.30"
+                />
+                <circle
+                  cx="1200"
+                  cy="600"
+                  r="700"
+                  stroke="url(#inkH)"
+                  stroke-width="2.0"
+                  opacity="0.30"
+                />
+                <circle
+                  cx="1200"
+                  cy="600"
+                  r="740"
+                  stroke="url(#inkG)"
+                  stroke-width="2.0"
+                  opacity="0.30"
+                />
+                <circle
+                  cx="1200"
+                  cy="600"
+                  r="780"
+                  stroke="url(#inkH)"
+                  stroke-width="2.0"
+                  opacity="0.30"
+                />
+                <circle
+                  cx="1200"
+                  cy="600"
+                  r="820"
+                  stroke="url(#inkG)"
+                  stroke-width="2.0"
+                  opacity="0.30"
+                />
+                <circle
+                  cx="1200"
+                  cy="600"
+                  r="860"
+                  stroke="url(#inkH)"
+                  stroke-width="2.0"
+                  opacity="0.30"
+                />
+                <circle
+                  cx="1200"
+                  cy="600"
+                  r="900"
+                  stroke="url(#inkG)"
+                  stroke-width="2.0"
+                  opacity="0.30"
+                />
+                <circle
+                  cx="1200"
+                  cy="600"
+                  r="940"
+                  stroke="url(#inkH)"
+                  stroke-width="2.0"
+                  opacity="0.30"
+                />
+                <circle
+                  cx="1200"
+                  cy="600"
+                  r="980"
+                  stroke="url(#inkG)"
+                  stroke-width="2.0"
+                  opacity="0.30"
+                />
+                <circle
+                  cx="1200"
+                  cy="600"
+                  r="1020"
+                  stroke="url(#inkH)"
+                  stroke-width="2.0"
+                  opacity="0.30"
+                />
+                <circle
+                  cx="1200"
+                  cy="600"
+                  r="1060"
+                  stroke="url(#inkG)"
+                  stroke-width="2.0"
+                  opacity="0.30"
+                />
+                <circle
+                  cx="1200"
+                  cy="600"
+                  r="1100"
+                  stroke="url(#inkH)"
+                  stroke-width="2.0"
+                  opacity="0.30"
+                />
+                <circle
+                  cx="1200"
+                  cy="600"
+                  r="1140"
+                  stroke="url(#inkG)"
+                  stroke-width="2.0"
+                  opacity="0.30"
+                />
+                <circle
+                  cx="1200"
+                  cy="600"
+                  r="1180"
+                  stroke="url(#inkH)"
+                  stroke-width="2.0"
+                  opacity="0.30"
+                />
+              </g>
+            </g>
+          </g>
+        </svg>
       </section>
+      <!-- TESTIMONIAL SECTION -->
       <section id="testimonials">
-        <div class="container">
-          <div class="row">
-            <figure class="testimonials__img--wrapper">
-              <img
-                class="testimonials__img"
-                src="./assets/love-illustration.c759090fa833369ad6ffb6eb19cacb3e.svg"
-                alt=""
-              />
-            </figure>
-            <div class="testimonials__section">
-              <h3 class="section__tag">
-                <span class="purple">TESTIMONIALS</span>
-              </h3>
-              <h2 class="section__title">
-                Our Clients
-                <span class="purple">Love Us.</span>
-              </h2>
-              <p class="section__para">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua enim
-                ad minim veniam.
-              </p>
-              <div class="testimonial">
-                <div class="testimonial__rating">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
+        <h2>Member Testimonials</h2>
+        <div class="swiper testimonial-swiper">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-left">
+                  <img
+                    src="./assets/assets/testimonial  (1).png"
+                    alt="Testimonial 1"
+                  />
                 </div>
-                <div class="testimonial__title">Amazing User Experience</div>
-                <p class="testimonial__para">
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                  occaecat cupidatat non proident, sunt in culpa qui officia.
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco.
-                </p>
-                <div class="testimonial__bottom">
-                  <div class="testimonial__profile">
-                    <img
-                      class="testimonial__img"
-                      src="./assets/photo-1494790108377-be9c29b29330.avif"
-                      alt=""
-                    />
-                    <div class="testimonial__details">
-                      <div class="testimonial__name">Charlotte Hale</div>
-                      <div class="testimonial__role">Director, Delos Inc.</div>
-                    </div>
-                  </div>
-                  <div class="testimonial__buttons">
-                    <button class="testimonial__button">
-                      <i class="fa-solid fa-arrow-left"></i>
-                    </button>
-                    <div class="divider"></div>
-                    <button class="testimonial__button">
-                      <i class="fa-solid fa-arrow-right"></i>
-                    </button>
-                  </div>
+                <div class="testimonial-right">
+                  <p class="highlight-quote">
+                    “This community changed everything.”
+                  </p>
+                  <p class="testimonial-description">
+                    Before joining, I was lost. Now I understand trading
+                    strategy, risk, and timing.
+                  </p>
+                  <p class="testimonial-quote">
+                    “The live alerts alone are worth it.”
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-left">
+                  <img
+                    src="./assets/assets/testimonial  (2).png"
+                    alt="Testimonial 2"
+                  />
+                </div>
+                <div class="testimonial-right">
+                  <p class="highlight-quote">“$400 in one morning.”</p>
+                  <p class="testimonial-description">
+                    I used the premarket levels from the Discord and hit target
+                    within 20 minutes.
+                  </p>
+                  <p class="testimonial-quote">
+                    “Simple, clear, and profitable.”
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-left">
+                  <img
+                    src="./assets/assets/testimonial  (3).png"
+                    alt="Testimonial 3"
+                  />
+                </div>
+                <div class="testimonial-right">
+                  <p class="highlight-quote">“Finally a mentor that’s real.”</p>
+                  <p class="testimonial-description">
+                    I’ve tried others, but this is the first community where I
+                    actually learned.
+                  </p>
+                  <p class="testimonial-quote">
+                    “Transparent trades. No hype.”
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="swiper-slide testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-left">
+                  <img
+                    src="./assets/assets/testimonial  (4).png"
+                    alt="Testimonial 4"
+                  />
+                </div>
+                <div class="testimonial-right">
+                  <p class="highlight-quote">“Made $1,200 last week.”</p>
+                  <p class="testimonial-description">
+                    All from just sticking to the plan and keeping it simple.
+                  </p>
+                  <p class="testimonial-quote">
+                    “Risk management finally makes sense.”
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="swiper-slide testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-left">
+                  <img
+                    src="./assets/assets/testimonial  (5).png"
+                    alt="Testimonial 5"
+                  />
+                </div>
+                <div class="testimonial-right">
+                  <p class="highlight-quote">“I don’t overtrade anymore.”</p>
+                  <p class="testimonial-description">
+                    The alerts keep me focused and disciplined every session.
+                  </p>
+                  <p class="testimonial-quote">“Quality over quantity.”</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 6 -->
+            <div class="swiper-slide testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-left">
+                  <img
+                    src="./assets/assets/testimonial  (6).png"
+                    alt="Testimonial 6"
+                  />
+                </div>
+                <div class="testimonial-right">
+                  <p class="highlight-quote">“From $50 to $300 in 2 days.”</p>
+                  <p class="testimonial-description">
+                    Started small, stayed consistent, followed the chat — it
+                    works.
+                  </p>
+                  <p class="testimonial-quote">“Small accounts can win too.”</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 7 -->
+            <div class="swiper-slide testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-left">
+                  <img
+                    src="./assets/assets/testimonial  (7).png"
+                    alt="Testimonial 7"
+                  />
+                </div>
+                <div class="testimonial-right">
+                  <p class="highlight-quote">“I trade less and make more.”</p>
+                  <p class="testimonial-description">
+                    I used to chase all day. Now I wait for high-conviction
+                    setups.
+                  </p>
+                  <p class="testimonial-quote">“Discipline is built here.”</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 8 -->
+            <div class="swiper-slide testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-left">
+                  <img
+                    src="./assets/assets/testimonial  (8).png"
+                    alt="Testimonial 8"
+                  />
+                </div>
+                <div class="testimonial-right">
+                  <p class="highlight-quote">
+                    “Joined two weeks ago. Already profitable.”
+                  </p>
+                  <p class="testimonial-description">
+                    Live classes helped connect the dots. Entries make sense
+                    now.
+                  </p>
+                  <p class="testimonial-quote">
+                    “It’s step-by-step education.”
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 9 -->
+            <div class="swiper-slide testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-left">
+                  <img
+                    src="./assets/assets/testimonial  (9).png"
+                    alt="Testimonial 9"
+                  />
+                </div>
+                <div class="testimonial-right">
+                  <p class="highlight-quote">“Every dollar was worth it.”</p>
+                  <p class="testimonial-description">
+                    The cost is low compared to the value you get here.
+                  </p>
+                  <p class="testimonial-quote">“ROI in just 1 day.”</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 10 -->
+            <div class="swiper-slide testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-left">
+                  <img
+                    src="./assets/assets/testimonial  (10).png"
+                    alt="Testimonial 10"
+                  />
+                </div>
+                <div class="testimonial-right">
+                  <p class="highlight-quote">“My confidence is back.”</p>
+                  <p class="testimonial-description">
+                    This isn’t just about trading — it’s mindset, psychology,
+                    and confidence.
+                  </p>
+                  <p class="testimonial-quote">
+                    “Back in control of my future.”
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 11 -->
+            <div class="swiper-slide testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-left">
+                  <img
+                    src="./assets/assets/testimonial  (11).png"
+                    alt="Testimonial 11"
+                  />
+                </div>
+                <div class="testimonial-right">
+                  <p class="highlight-quote">“Small gains add up.”</p>
+                  <p class="testimonial-description">
+                    $50, $80, $120… stacking green days with simple setups.
+                  </p>
+                  <p class="testimonial-quote">
+                    “It’s repeatable. I’m not guessing anymore.”
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 12 -->
+            <div class="swiper-slide testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-left">
+                  <img
+                    src="./assets/assets/testimonial  (12).png"
+                    alt="Testimonial 12"
+                  />
+                </div>
+                <div class="testimonial-right">
+                  <p class="highlight-quote">“Live calls are golden.”</p>
+                  <p class="testimonial-description">
+                    Watching real trades unfold taught me more than any course.
+                  </p>
+                  <p class="testimonial-quote">“See it. Hear it. Do it.”</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 13 -->
+            <div class="swiper-slide testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-left">
+                  <img
+                    src="./assets/assets/testimonial  (13).png"
+                    alt="Testimonial 13"
+                  />
+                </div>
+                <div class="testimonial-right">
+                  <p class="highlight-quote">“I’m finally consistent.”</p>
+                  <p class="testimonial-description">
+                    3 green weeks in a row after months of losses.
+                  </p>
+                  <p class="testimonial-quote">
+                    “This group keeps you accountable.”
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 14 -->
+            <div class="swiper-slide testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-left">
+                  <img
+                    src="./assets/assets/testimonial  (14).png"
+                    alt="Testimonial 14"
+                  />
+                </div>
+                <div class="testimonial-right">
+                  <p class="highlight-quote">“Results in 24 hours.”</p>
+                  <p class="testimonial-description">
+                    Used the watchlist and made $220 on day 1.
+                  </p>
+                  <p class="testimonial-quote">
+                    “You’ll be shocked how fast it clicks.”
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 15 -->
+            <div class="swiper-slide testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-left">
+                  <img
+                    src="./assets/assets/testimonial  (15).png"
+                    alt="Testimonial 15"
+                  />
+                </div>
+                <div class="testimonial-right">
+                  <p class="highlight-quote">“I finally found my edge.”</p>
+                  <p class="testimonial-description">
+                    Thanks to the structure and support, I know what I’m doing.
+                  </p>
+                  <p class="testimonial-quote">
+                    “It’s more than alerts. It’s a system.”
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 16 -->
+            <div class="swiper-slide testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-left">
+                  <img
+                    src="./assets/assets/testimonial  (16).png"
+                    alt="Testimonial 16"
+                  />
+                </div>
+                <div class="testimonial-right">
+                  <p class="highlight-quote">“I finally found my edge.”</p>
+                  <p class="testimonial-description">
+                    Thanks to the structure and support, I know what I’m doing.
+                  </p>
+                  <p class="testimonial-quote">
+                    “It’s more than alerts. It’s a system.”
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 17 -->
+            <div class="swiper-slide testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-left">
+                  <img
+                    src="./assets/assets/testimonial  (17).png"
+                    alt="Testimonial 17"
+                  />
+                </div>
+                <div class="testimonial-right">
+                  <p class="highlight-quote">“I finally found my edge.”</p>
+                  <p class="testimonial-description">
+                    Thanks to the structure and support, I know what I’m doing.
+                  </p>
+                  <p class="testimonial-quote">
+                    “It’s more than alerts. It’s a system.”
+                  </p>
                 </div>
               </div>
             </div>
           </div>
+          <div
+            class="testimonial-nav"
+            style="text-align: center; margin-top: 20px"
+          >
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+
+          <div class="swiper-pagination" style="margin-top: 15px"></div>
         </div>
       </section>
-      <section id="start">
-        <div class="container">
-          <div class="row">
-            <svg viewBox="0 0 600 600" class="start__blob--1">
-                        <g transform="translate(300,300)">
-                            <path d="M153.6,-239C199.1,-209.8,236,-167.2,258.4,-118C280.9,-68.9,288.9,-13.1,281.2,40.4C273.5,93.9,250.1,145.2,214.7,186.1C179.3,226.9,131.9,257.4,80,272.6C28.2,287.8,-28.2,287.8,-80,272.6C-131.9,257.4,-179.3,226.9,-214.7,186.1C-250.1,145.2,-273.5,93.9,-281.2,40.4C-288.9,-13.1,-280.9,-68.9,-258.4,-118C-236,-167.2,-199.1,-209.8,-153.6,-239C-108.1,-268.3,-54.1,-284.1,0,-284.1C54.1,-284.1,108.1,-268.3,153.6,-239Z" fill="rgb(80,17,204)"></path>
-                        </g>
-                    </svg>
-                    <svg viewBox="0 0 600 600" class="start__blob--2">
-                        <g transform="translate(300,300)">
-                            <path d="M153.6,-239C199.1,-209.8,236,-167.2,258.4,-118C280.9,-68.9,288.9,-13.1,281.2,40.4C273.5,93.9,250.1,145.2,214.7,186.1C179.3,226.9,131.9,257.4,80,272.6C28.2,287.8,-28.2,287.8,-80,272.6C-131.9,257.4,-179.3,226.9,-214.7,186.1C-250.1,145.2,-273.5,93.9,-281.2,40.4C-288.9,-13.1,-280.9,-68.9,-258.4,-118C-236,-167.2,-199.1,-209.8,-153.6,-239C-108.1,-268.3,-54.1,-284.1,0,-284.1C54.1,-284.1,108.1,-268.3,153.6,-239Z" fill="rgb(80,17,204)"></path>
-                        </g>
-                    </svg>
-            <div class="start__box">
-              <div class="start__row">
-                
-                <div class="start__text">
-                  Developers all over the world are happily using Treact.
-                </div>
-                <div class="start__button--wrapper">
-                  <button class="start__btn">Get Started</button>
-                  <button class="start__btn--2">Contact Us</button>
-                </div>
-              </div>
+      <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+          <div class="faq-item">
+            <button class="faq-question">What experience do I need?</button>
+            <div class="faq-answer">
+              <p>None. We’ll meet you where you are.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Is this a signals group?</button>
+            <div class="faq-answer">
+              <p>
+                No. You get education, alerts, and strategy — not “copy &
+                paste.”
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Do you offer refunds?</button>
+            <div class="faq-answer">
+              <p>
+                Due to the value and tools provided, no refunds are offered.
+              </p>
             </div>
           </div>
         </div>
       </section>
     </main>
     <footer>
-     <svg viewBox="0 0 600 600" class="footer__blob--1">
-            <g transform="translate(300,300)">
-                <path d="M153.6,-239C199.1,-209.8,236,-167.2,258.4,-118C280.9,-68.9,288.9,-13.1,281.2,40.4C273.5,93.9,250.1,145.2,214.7,186.1C179.3,226.9,131.9,257.4,80,272.6C28.2,287.8,-28.2,287.8,-80,272.6C-131.9,257.4,-179.3,226.9,-214.7,186.1C-250.1,145.2,-273.5,93.9,-281.2,40.4C-288.9,-13.1,-280.9,-68.9,-258.4,-118C-236,-167.2,-199.1,-209.8,-153.6,-239C-108.1,-268.3,-54.1,-284.1,0,-284.1C54.1,-284.1,108.1,-268.3,153.6,-239Z" fill="rgba(80,17,204)"></path>
-            </g>
-        </svg>
-        <svg viewBox="0 0 600 600" class="footer__blob--2">
-            <g transform="translate(300,300)">
-                <path d="M153.6,-239C199.1,-209.8,236,-167.2,258.4,-118C280.9,-68.9,288.9,-13.1,281.2,40.4C273.5,93.9,250.1,145.2,214.7,186.1C179.3,226.9,131.9,257.4,80,272.6C28.2,287.8,-28.2,287.8,-80,272.6C-131.9,257.4,-179.3,226.9,-214.7,186.1C-250.1,145.2,-273.5,93.9,-281.2,40.4C-288.9,-13.1,-280.9,-68.9,-258.4,-118C-236,-167.2,-199.1,-209.8,-153.6,-239C-108.1,-268.3,-54.1,-284.1,0,-284.1C54.1,-284.1,108.1,-268.3,153.6,-239Z" fill="rgba(80,17,204)"></path>
-            </g>
-        </svg>
-      <div class="row footer__row">
-        <div class="links__block">
-          <div class="links__column--wrapper">
-            <div class="link__title">MAIN</div>
-            <a class="footer__link">Blog</a>
-            <a class="footer__link">FAQs</a>
-            <a class="footer__link">Support</a>
-            <a class="footer__link">About Us</a>
+      <div class="container">
+        <div class="row row__column">
+                    <div class="footer__divider"></div>
+
+          <div class="footer__links">
+            <a href="#">
+              <figure class="footer__logo">
+                <img
+                  src="./assets/assets/Logo.svg"
+                  class="footer__logo--img"
+                  alt=""
+                />
+              </figure>
+            </a>
+            <div class="footer__list">
+              <a href="#" class="footer__link">Home</a>
+              <a href="#works" class="footer__link">How It Works</a>
+              <a href="#features&benefits" class="footer__link"
+                >Features & Benefits</a
+              >
+              <a href="#pricing" class="footer__link">Payment Schedule</a>
+              <a href="#testimonials" class="footer__link"
+                >Member Testimonials</a
+              >
+              <a href="#faq" class="footer__link">FAQ</a>
+            </div>
           </div>
-          <div class="links__column--wrapper">
-            <div class="link__title">PRODUCT</div>
-            <a class="footer__link">Log In</a>
-            <a class="footer__link">Personal</a>
-            <a class="footer__link">Business</a>
-            <a class="footer__link">Team Us</a>
+          <div class="footer__divider"></div>
+          <div class="disclaimer__title">Disclaimer</div>
+          <div class="footer__disclaimer">
+            If you do not agree with any term or provision of our Terms and
+            Conditions you should not use our Site, Services, Content, or
+            Information. Please be advised that your continued use of the Site,
+            Services, Content, or Information provided shall indicate your
+            consent and agreement to our Terms and Conditions. We caution our
+            viewers to practice ONLY on the simulator and not to use real money
+            and never trade based on anyone’s opinion or actions. You must be at
+            least 18 years of age to use the Service. If you are not at least 18
+            years old, please do not access or use the Service. No information
+            herein is intended as securities brokerage, investment, tax,
+            accounting or legal advice, as an offer or solicitation of an offer
+            to sell or buy, or as an endorsement, recommendation or sponsorship
+            of any company, security or fund. Selfish Trader cannot and does not
+            assess, verify or guarantee the adequacy, accuracy or completeness
+            of any information, the suitability or profitability of any
+            particular investment, or the potential value of any investment or
+            informational source. The reader bears responsibility for his/her
+            own investment research and decisions, should seek the advice of a
+            qualified securities professional before making any investment, and
+            investigate and fully understand any and all risks before investing.
+            Selfish Trader in no way warrants the solvency, financial condition,
+            or investment advisability of any of the securities mentioned in
+            communications or websites. In addition, Selfish Trader accepts no
+            liability whatsoever for any direct or consequential loss arising
+            from any use of this information. This information is not intended
+            to be used as the sole basis of any investment decision, nor should
+            it be construed as advice designed to meet the investment needs of
+            any particular investor. Past performance is not necessarily
+            indicative of future returns.
           </div>
-          <div class="links__column--wrapper">
-            <div class="link__title">PRESS</div>
-            <a class="footer__link">Logos</a>
-            <a class="footer__link">Events</a>
-            <a class="footer__link">Stories</a>
-            <a class="footer__link">Office Us</a>
-          </div>
-          <div class="links__column--wrapper">
-            <div class="link__title">TEAM</div>
-            <a class="footer__link">Career</a>
-            <a class="footer__link">Founders</a>
-            <a class="footer__link">Culture</a>
-            <a class="footer__link">Onboarding</a>
-          </div>
-          <div class="links__column--wrapper">
-            <div class="link__title">LEGAL</div>
-            <a class="footer__link">GDPR</a>
-            <a class="footer__link">Privacy Policy</a>
-            <a class="footer__link">Terms of Service</a>
-            <a class="footer__link">Disclaimer</a>
-          </div>
-        </div>
-        <div class="footer__divider"></div>
-        <div class="footer__info">
-          <a href="#">
-            <figure class="footer__logo">
-              <img class="footer__logo--img"
-                src="./assets/logo-light.d9a5d1b5be5ea077b26864fdfc2e96a4.svg"
-                alt=""
-              />
-              <div class="footer__logo--title">Treact Inc.</div>
-            </figure>
-          </a>
+          <div class="footer__divider"></div>
           <div class="footer__copyright">
-            &copy; 2018 Treact Inc. All Rights Reserved.
-          </div>
-          <div class="footer__icons">
-            <a class="footer__icon">
-              <i class="fa-brands fa-facebook"></i>
-            </a>
-            <a class="footer__icon">
-              <i class="fa-brands fa-twitter"></i>
-            </a>
-            <a class="footer__icon">
-              <i class="fa-brands fa-youtube"></i>
-            </a>
+            Copyright © 2021 Selfish Trader - All Rights Reserved.
           </div>
         </div>
       </div>
     </footer>
+
+    <!-- Floating Button -->
+    <button id="contact-button" aria-label="Contact Us">
+      <i class="fas fa-comment"></i>
+    </button>
+
+    <!-- Contact Modal -->
+    <div id="contact-modal">
+      <div class="contact-modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            rows="5"
+            required
+          ></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
