@@ -30,74 +30,85 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // ✅ PRICING TOGGLE FUNCTIONALITY
-  const planOptions = document.querySelectorAll(".plan-option");
-  const details = document.getElementById("plan-details");
+// PRICING TOGGLE FUNCTIONALITY
+// ✅ PRICING TOGGLE FUNCTIONALITY
+const planOptions = document.querySelectorAll(".plan-option");
+const details = document.getElementById("plan-details");
 
-  const planContent = {
-    weekly: {
-      title: "Weekly Plan",
-      price: "$12.50 billed weekly",
-      features: [
-        { label: "Access", value: "Full features" },
-        { label: "Support", value: "Email & chat" },
-        { label: "Commitment", value: "Cancel anytime" },
-      ],
-    },
-    biweekly: {
-      title: "Biweekly Plan",
-      price: "$25 billed every 2 weeks",
-      features: [
-        { label: "Access", value: "Full features" },
-        { label: "Support", value: "Email & chat" },
-        { label: "Commitment", value: "Cancel anytime" },
-      ],
-    },
-    monthly: {
-      title: "Monthly Plan",
-      price: "$50 billed monthly",
-      features: [
-        { label: "Access", value: "Full features" },
-        { label: "Support", value: "Email & chat" },
-        { label: "Commitment", value: "Cancel anytime" },
-      ],
-    },
-    annually: {
-      title: "Annual Plan",
-      price: "$600 billed annually",
-      features: [
-        { label: "Access", value: "Full features" },
-        { label: "Support", value: "Email & chat" },
-        { label: "Commitment", value: "Cancel anytime" },
-      ],
-    },
-  };
+const planContent = {
+  weekly: {
+    title: "Weekly Plan",
+    price: "$12.50 billed weekly",
+    features: [
+      { label: "Access", value: "Full features" },
+      { label: "Support", value: "Email & chat" },
+      { label: "Commitment", value: "Cancel anytime" },
+    ],
+  },
+  biweekly: {
+    title: "Biweekly Plan",
+    price: "$25 billed biweekly",
+    features: [
+      { label: "Access", value: "Full features" },
+      { label: "Support", value: "Email & chat" },
+      { label: "Commitment", value: "Cancel anytime" },
+    ],
+  },
+  monthly: {
+    title: "Monthly Plan",
+    price: "$50 billed monthly",
+    features: [
+      { label: "Access", value: "Full features" },
+      { label: "Support", value: "Email & chat" },
+      { label: "Commitment", value: "Cancel anytime" },
+    ],
+  },
+  annually: {
+    title: "Annual Plan",
+    price: "$600 billed annually",
+    features: [
+      { label: "Access", value: "Full features" },
+      { label: "Support", value: "Email & chat" },
+      { label: "Commitment", value: "Cancel anytime" },
+    ],
+  },
+};
 
-  planOptions.forEach((option) => {
-    option.addEventListener("click", () => {
-      planOptions.forEach((opt) => opt.classList.remove("active"));
-      option.classList.add("active");
+planOptions.forEach((option) => {
+  option.addEventListener("click", () => {
+    // Remove active class from all
+    planOptions.forEach((opt) => opt.classList.remove("active"));
+    option.classList.add("active");
 
-      const planKey = option.getAttribute("data-plan");
-      const content = planContent[planKey];
+    // Get selected plan data
+    const planKey = option.getAttribute("data-plan");
+    const content = planContent[planKey];
+    if (!content) return;
 
-      if (!content) return;
-
-      details.innerHTML = `
-        <h2>${content.title}</h2>
-        <p class="monthly-price">${content.price}</p>
-        <ul class="plan-info">
-          ${content.features
-            .map(
-              (feature) =>
-                `<li><strong>${feature.label}:</strong> ${feature.value}</li>`
-            )
-            .join("")}
-        </ul>
-        <button class="start-btn">START NOW</button>
-      `;
-    });
+    // Update pricing details
+    details.innerHTML = `
+      <h2>${content.title}</h2>
+      <p class="monthly-price">${content.price}</p>
+      <ul class="plan-info">
+        ${content.features
+          .map(
+            (feature) =>
+              `<li>
+                <strong class="pricing__header">${feature.label}:</strong>
+                <span class="feature-value">${feature.value}</span>
+              </li>`
+          )
+          .join("")}
+      </ul>
+      <button class="start-btn">START NOW</button>
+    `;
   });
+});
+
+// ✅ Trigger default view (simulate first tab click)
+document.querySelector('.plan-option[data-plan="weekly"]').click();
+
+
 
   // ✅ FAQ ACCORDION
   const faqItems = document.querySelectorAll(".faq-item");

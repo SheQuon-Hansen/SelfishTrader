@@ -367,12 +367,12 @@ h3 {
   width: 100%;
 }
 
-.header__description--para {
+/* .header__description--para {
   margin: 32px 0px;
-}
+} */
 
 .header__video--wrapper {
-  margin-top: 150px;
+  margin-top: 60px;
   display: flex;
   justify-content: center;
 }
@@ -390,7 +390,7 @@ h3 {
   width: 100%;
   height: auto;
   display: block;
-  background-color: #000;
+  /* background-color: #000; */
   outline: none;
   opacity: 1;
   transition: opacity 0.3s ease;
@@ -484,8 +484,9 @@ header .header__video--wrapper {
 
 #works {
   margin-bottom: 110px;
+  margin-top: 60px;
   position: relative;
-  background: #121212;
+  /* background: #121212; */
   overflow: hidden;
   z-index: 0;
 }
@@ -610,7 +611,7 @@ header .header__video--wrapper {
   flex: 1 1 220px;
   max-width: 360px;
   border-radius: 12px;
-  padding: 3rem 1rem;
+  padding: 48px 16px;
   color: #dddddd;
   transition: all 0.3s ease;
   display: flex;
@@ -638,14 +639,14 @@ header .header__video--wrapper {
 }
 
 
-.works__text {
+.steps__para {
   /* display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center; */
   background-color: rgba(38, 42, 47, 0.6);
-  padding: 3rem 1rem;
+  padding: 16px 20px;
   border-radius: 6px;
 }
 
@@ -711,6 +712,16 @@ header .header__video--wrapper {
   margin: 30px auto;
 }
 
+.feature__group1 {
+  width: 50%;
+  margin-left: 30px;
+}
+.feature__group2 {
+  width: 50%;
+    margin-left: 30px;
+
+}
+
 .feature {
   display: flex;
   align-items: center;
@@ -764,7 +775,8 @@ header .header__video--wrapper {
 .fas.fa-book-open,
 .fas.fa-calendar-days,
 .fas.fa-comments,
-.fas.fa-trophy {
+.fas.fa-trophy,
+.fa-file-pen {
   font-weight: 900;
   font-size: 36px;
 }
@@ -801,7 +813,7 @@ header .header__video--wrapper {
 
 /* === Comparison Section Container === */
 #comparison {
-  background-color: #121212;
+  /* background-color: #121212; */
   padding: 50px 20px;
   color: #ffffff;
   font-family: "Inter", "Segoe UI", sans-serif;
@@ -935,7 +947,7 @@ header .header__video--wrapper {
 
 /* === PRICING SECTION === */
 #pricing {
-  background-color: #121212;
+  /* background-color: #121212; */
   color: #dddddd;
   padding: 60px 20px;
   font-family: "Inter", "Segoe UI", sans-serif;
@@ -968,6 +980,7 @@ header .header__video--wrapper {
   display: flex;
   flex-direction: column;
 }
+
 
 /* Headings */
 #pricing h2 {
@@ -1044,23 +1057,36 @@ header .header__video--wrapper {
 }
 
 .plan-option h3 {
-  font-size: 1.1rem;
+  font-size: 16px;
   margin-bottom: 5px;
   font-weight: 600;
 }
 
 .plan-option .price {
-  font-size: 1.4rem;
+  font-size: 14px;
   color: #32a852;
   font-weight: bold;
 }
 
 .plan-option .billing {
-  font-size: 0.85rem;
+  font-size: 12px;
   color: #757575;
 }
 
 /* Right Panel */
+.pricing__header {
+  display: block;           /* forces line break */
+  color: #32a852;           /* match the green color used elsewhere */
+  font-weight: 700;         /* a bit bolder for emphasis */
+  margin-bottom: 4px;       /* spacing below the label */
+}
+
+.feature-value {
+  display: block;
+  margin-left: 0;
+  color: #dddddd;
+}
+
 .pricing-right {
   flex: 2;
   width: 60%;
@@ -1093,12 +1119,17 @@ header .header__video--wrapper {
   margin-bottom: 30px;
   font-size: 1rem;
   color: #dddddd;
+  display: flex;
+  justify-content: space-between;
 }
 
 .plan-info li {
   margin: 10px 0;
   font-weight: 500;
   color: #dddddd;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 /* Button */
@@ -1137,7 +1168,7 @@ header .header__video--wrapper {
    ============================================ */
 
 #testimonials {
-  background-color: #121212;
+  /* background-color: #121212; */
   color: #dddddd;
   padding: 40px 20px;
   max-width: 900px;
@@ -1150,7 +1181,7 @@ header .header__video--wrapper {
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 30px;
-  color: #32a852;
+  color: #dddddd;
   text-align: center;
 }
 
@@ -1179,8 +1210,8 @@ header .header__video--wrapper {
 
 /* Card */
 #testimonials .testimonial-card {
-  background: #1e1e1e;
-  border-radius: 12px;
+border: 1px solid hsla(0, 0%, 100%, .2);  
+border-radius: 4px;
   padding: 25px 30px;
   display: flex;
   gap: 25px;
@@ -1315,11 +1346,22 @@ header .header__video--wrapper {
    Responsive tweaks
    ============================================ */
 @media (max-width: 900px) {
+  .btn__menu {
+    font-size: 28px;
+  }
+
+  .works__description--wrapper {
+    padding-right: 40px;
+  }
+
   #testimonials .testimonial-card {
     gap: 20px;
     padding: 22px 24px;
   }
-  #testimonials .testimonial-left { width: 220px; }
+
+  #testimonials .testimonial-left { 
+    width: 220px; 
+  }
 }
 
 @media (max-width: 720px) {
@@ -1357,7 +1399,7 @@ header .header__video--wrapper {
 /* === FAQ SECTION === */
 
 #faq {
-  background-color: #121212;
+  /* background-color: #121212; */
   padding: 60px 20px;
   color: #dddddd;
   font-family: "Inter", "Segoe UI", sans-serif;
@@ -1384,7 +1426,7 @@ header .header__video--wrapper {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 6px;
   overflow: hidden;
-  background-color: #121212;
+  /* background-color: #121212; */
   transition: border 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -1432,7 +1474,7 @@ header .header__video--wrapper {
   max-height: 0;
   overflow: hidden;
   padding: 0 20px;
-  background-color: #121212;
+  /* background-color: #121212; */
   transition: max-height 0.4s ease, padding 0.3s ease;
 }
 
@@ -1450,6 +1492,12 @@ header .header__video--wrapper {
 
 /* Responsive */
 @media (max-width: 600px) {
+  .header__description h1 {
+    font-size: 32px;
+  }
+  .header__description h1 {
+    font-size: 32px;
+  }
   .faq-question {
     font-size: 1rem;
   }
@@ -1461,6 +1509,14 @@ header .header__video--wrapper {
 
 /* Responsive */
 @media (max-width: 768px) {
+      .works__description {
+        flex-direction: column-reverse;
+    }
+
+        .works__para {
+        text-align: center;
+    }
+    
   .testimonial-card {
     flex-direction: column;
     text-align: center;
@@ -1474,19 +1530,11 @@ header .header__video--wrapper {
     text-align: center;
     margin-top: 20px;
   }
-}
 
-
-/* Responsive */
-@media (max-width: 768px) {
-  .pricing-container {
-    flex-direction: column;
-  }
-
-  #pricing .row {
+  /* #pricing .row {
     flex-direction: row;
     justify-content: space-between;
-  }
+  } */
 
   .pricing-right {
     align-items: center;
@@ -1494,7 +1542,11 @@ header .header__video--wrapper {
   }
 
   .plan-info li {
+    display: flex;
     text-align: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
   }
 
   .start-btn {
@@ -1609,7 +1661,9 @@ header .header__video--wrapper {
 }
 
 /* FOOTER */
-
+.footer__list {
+  text-align: center;
+}
 .footer__links {
   margin: 0;
   display: flex;
@@ -1778,18 +1832,63 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .header__description h1 {
+    font-size: 36px;
+  }
+  .header__description h2 {
+    font-size: 30px;
+  }
+  #works {
+    margin-top: 60px;
+
+  }
+
+      .works__description--wrapper {
+        padding: 0;
+        width: 100%;
+        align-items: center;
+    }
+
+        .works__gradient {
+        padding: 0;
+        width: 75%;
+    }
+
+  .works__steps {
+    flex-wrap: nowrap;
+  }
+
   .features {
     justify-content: center;
   }
-  .feature {
-    width: 100%;
-    max-width: 384px;
+
+  .features__title {
+    font-size: 28px;
   }
 
+  .feature__group1 {
+  margin-left: 0px;
+}
+
+  .feature {
+    width: 100%;
+  }
+#comparison h2 {
+  font-size: 28px;
+}
   #quality .row,
   #values .row {
     flex-direction: column-reverse;
   }
+
+  #testimonials h2 {
+    font-size: 28px;
+  }
+
+  #faq h2 {
+    font-size: 28px;
+  }
+
   .quality__section,
   .quality__img--wrapper,
   .steps__section,
@@ -1854,14 +1953,20 @@ footer {
   .values__img--wrapper {
     width: 100%;
   }
-  #pricing .row {
-    margin-top: 40px;
-  }
+  
   div.testimonials__section {
     padding-left: 0;
   }
   .links__column--wrapper {
     width: calc(100% / 3);
+  }
+
+  .footer__links {
+    flex-direction: column;
+  }
+
+  .footer__link {
+    padding-left: 10px;
   }
 
   .footer__info {
@@ -1884,7 +1989,7 @@ footer {
     display: none;
   }
   h1 {
-    font-size: 30px;
+    font-size: 40px;
   }
   header .row {
     flex-direction: column;
@@ -1892,16 +1997,16 @@ footer {
   }
   .header__description {
     width: 100%;
-    max-width: 512px;
+    /* max-width: 512px; */
     margin: 0 auto;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .header__description--para {
+  /* .header__description--para {
     margin: 20px 0px;
-  }
+  } */
   .header__description--customers {
     margin-top: 48px;
   }
@@ -1913,16 +2018,21 @@ footer {
   .header__img {
     max-width: 512px;
   }
+
+  .header__video--wrapper {
+    margin-right: 100px;
+    margin-left: 100px;
+  }
   /* #features .section__title,
   #pricing .section__title {
     font-size: 48px;
   } */
   .features {
-    max-width: 768px;
+    /* max-width: 768px; */
   }
   .feature {
     padding: 32px 8px;
-    margin: 0 16px;
+    margin: 0 auto;
   }
   .quality__section {
     margin-right: 0px;
@@ -1985,9 +2095,6 @@ footer {
     align-items: flex-end;
   }
 
-  h1 {
-    font-size: 36px;
-  }
 
   .header__description--para {
     font-size: 16px;
@@ -2009,5 +2116,192 @@ footer {
   }
   .testimonials__section {
     width: 60%;
+  }
+}
+
+/* ================================
+   RESPONSIVE BREAKPOINT OVERRIDES
+   (Paste this at the very end of your CSS)
+   ================================ */
+
+/* 550px and below — SMALL PHONES */
+@media (max-width: 550px) {
+  /* Hide nav links, adjust header, stacking behaviour */
+  nav {
+    padding: 0 10px;
+  }
+  .nav__links {
+    display: none;
+  }
+  h1 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+  .banner {
+    padding: 15px;
+    font-size: 14px;
+  }
+}
+
+/* 640px and below — LARGE PHONES / SMALL TABLETS */
+@media (max-width: 640px) {
+  .btn__menu {
+    font-size: 26px;
+  }
+  .header__description {
+    margin-top: -80px;
+  }
+  .header__description h1 {
+    font-size: 28px;
+  }
+  .header__description h2 {
+    font-size: 22px;
+  }
+  .header__description h3 {
+    font-size: 18px;
+  }
+
+  .header__button {
+    font-size: 16px;
+  }
+
+  .works__description--wrapper {
+    padding: 0;
+    width: 100%;
+    align-items: center;
+  }
+
+  .works__description {
+    flex-direction: column-reverse;
+  }
+
+  .works__para {
+    text-align: center;
+  }
+
+  .works__gradient {
+    padding: 0;
+    width: 75%;
+  }
+
+  .steps__title {
+    font-size: 18px;
+  }
+
+  .steps__para {
+    font-size: 14px;
+  }
+
+  
+  .faq-question {
+    font-size: 1rem;
+  }
+  .faq-answer p {
+    font-size: 0.95rem;
+  }
+  .banner {
+    padding: 15px;
+    font-size: 15px;
+  }
+  main {
+    padding: 0 10px;
+  }
+
+  #works {
+    margin-top: -80px;
+    margin-bottom: -30px;
+  }
+
+  .works__step {
+    padding: 0;
+  }
+
+  .works__description {
+    margin-bottom: 50px;
+  }
+
+  #features .section__title,
+  #pricing h2 {
+    font-size: 36px;
+  }
+  .features__title {
+    font-size: 24px;
+  }
+  .pricing-container,
+  .pricing-left,
+  .pricing-right {
+    width: 100%;
+    /* flex-direction: column; */
+    padding: 0 10px;
+  }
+
+  .plan-info {
+    font-size: 14px;
+  }
+}
+
+/* 768px and below — TABLETS */
+@media (max-width: 768px) {
+  .works__bg {
+      transform: translate(-30%, -32%); /* nudge up/down to taste */
+
+  }
+  /* Testimonials — stack vertically */
+  #testimonials .testimonial-card {
+    flex-direction: column;
+    padding: 20px;
+  }
+  #testimonials .testimonial-left {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  /* Pricing stack */
+  .pricing-container {
+    /* flex-direction: column; */
+    gap: 20px;
+  }
+  /* Features adjust */
+  /* .features {
+    flex-direction: column;
+    align-items: center;
+  } */
+}
+
+/* 1024px and below — SMALL DESKTOPS / LARGE TABLETS */
+@media (max-width: 1024px) {
+  
+  header .row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .features {
+    /* padding: 0 20px; */
+  }
+  footer {
+    padding: 20px 30px;
+  }
+  .testimonial-card {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+/* 1280px and below — MEDIUM DESKTOPS */
+@media (max-width: 1280px) {
+  /* h1 {
+    font-size: 40px;
+  } */
+  #pricing h2 {
+    font-size: 28px;
+  }
+  .testimonial-card {
+    max-width: 680px;
+  }
+  .pricing-left {
+    width: 100%;
+  }
+  .pricing-right {
+    width: 100%;
   }
 }
